@@ -50,7 +50,7 @@ export default Smartphones;
 export const getStaticProps:GetStaticProps = async () => {
 
   // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_BASE}/search?search=`)
-  const response = await api.get('search?search=')
+  const response = await api.get('smartphones/last-phones')
 
   const data = await response.data
   

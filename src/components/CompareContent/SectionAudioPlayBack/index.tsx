@@ -12,74 +12,94 @@ const SectionAudioPlayBack: React.FC<InformationDevicesProps> = ({deviceOne, dev
       />
       
       <SectionRows 
-        labelOne={deviceOne.length === 0 ? [data[0].audioPlay] : deviceOne.map(one => {return one.audioPlay})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].audioPlay] : deviceTwo.map(two => {return two.audioPlay})}
-        labelThree={deviceThree.length === 0 ? [data[2].audioPlay] : deviceThree.map(three => {return three.audioPlay})}      
+        labelOne={deviceOne.audio_play_back.features}
+        labelTwo={deviceTwo.audio_play_back.features}
+        labelThree={deviceThree.audio_play_back.features}      
       />
 
-      {deviceOne.map(one => {return one.audioPlayFeatures.length}) >= [1] ? 
+      {deviceOne.audio_play_back.features2 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures})}      
+        labelOne={deviceOne.audio_play_back.features2}
+        labelTwo={deviceTwo.audio_play_back.features2}
+        labelThree={deviceThree.audio_play_back.features2}      
       />
-      : deviceTwo.map(two => {return two.audioPlayFeatures.length}) >= [1] ?
+      : deviceTwo.audio_play_back.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures})}      
+        labelOne={deviceOne.audio_play_back.features2}
+        labelTwo={deviceTwo.audio_play_back.features2}
+        labelThree={deviceThree.audio_play_back.features2}      
       />
 
-      : deviceThree.map(three => {return three.audioPlayFeatures.length}) >= [1] ?
+      : deviceThree.audio_play_back.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures})}      
+        labelOne={deviceOne.audio_play_back.features2}
+        labelTwo={deviceTwo.audio_play_back.features2}
+        labelThree={deviceThree.audio_play_back.features2}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.audioPlayFeatures2.length}) >= [1] ? 
+      {deviceOne.audio_play_back.features3 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures2})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures2})}      
+        labelOne={deviceOne.audio_play_back.features3}
+        labelTwo={deviceTwo.audio_play_back.features3}
+        labelThree={deviceThree.audio_play_back.features3}      
       />
-      : deviceTwo.map(two => {return two.audioPlayFeatures2.length}) >= [1] ?
+      : deviceTwo.audio_play_back.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures2})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures2})}      
+        labelOne={deviceOne.audio_play_back.features3}
+        labelTwo={deviceTwo.audio_play_back.features3}
+        labelThree={deviceThree.audio_play_back.features3}      
       />
 
-      : deviceThree.map(three => {return three.audioPlayFeatures2.length}) >= [1] ?
+      : deviceThree.audio_play_back.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures2})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures2})}      
+        labelOne={deviceOne.audio_play_back.features3}
+        labelTwo={deviceTwo.audio_play_back.features3}
+        labelThree={deviceThree.audio_play_back.features3}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.audioPlayFeatures3.length}) >= [1] ? 
+      {deviceOne.audio_play_back.features4 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures3})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures3})}      
+        labelOne={deviceOne.audio_play_back.features4}
+        labelTwo={deviceTwo.audio_play_back.features4}
+        labelThree={deviceThree.audio_play_back.features4}      
       />
-      : deviceTwo.map(two => {return two.audioPlayFeatures3.length}) >= [1] ?
+      : deviceTwo.audio_play_back.features4 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures3})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures3})}      
+        labelOne={deviceOne.audio_play_back.features4}
+        labelTwo={deviceTwo.audio_play_back.features4}
+        labelThree={deviceThree.audio_play_back.features4}      
       />
 
-      : deviceThree.map(three => {return three.audioPlayFeatures3.length}) >= [1] ?
+      : deviceThree.audio_play_back.features4 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.audioPlayFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.audioPlayFeatures3})}
-        labelThree={deviceThree.map(three => {return three.audioPlayFeatures3})}      
+        labelOne={deviceOne.audio_play_back.features4}
+        labelTwo={deviceTwo.audio_play_back.features4}
+        labelThree={deviceThree.audio_play_back.features4}      
       />
       : '' }
 
+      {deviceOne.audio_play_back.features5 ? 
+      <SectionRows
+        labelOne={deviceOne.audio_play_back.features5}
+        labelTwo={deviceTwo.audio_play_back.features5}
+        labelThree={deviceThree.audio_play_back.features5}      
+      />
+      : deviceTwo.audio_play_back.features5 ?
+      <SectionRows
+        labelOne={deviceOne.audio_play_back.features5}
+        labelTwo={deviceTwo.audio_play_back.features5}
+        labelThree={deviceThree.audio_play_back.features5}      
+      />
+
+      : deviceThree.audio_play_back.features5 ?
+      <SectionRows
+        labelOne={deviceOne.audio_play_back.features5}
+        labelTwo={deviceTwo.audio_play_back.features5}
+        labelThree={deviceThree.audio_play_back.features5}      
+      />
+      : '' }
 
 
     </div>

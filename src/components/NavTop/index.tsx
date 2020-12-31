@@ -6,11 +6,12 @@ import submarinoPhonesPrice from '../../services/submarinoPhonesPrice.json'
 
 
 import { Container } from "./style";
-import { DataProps } from "../CompareContent";
+import { DatasheetDeviceProps } from "../../pages/smartphones/[page]";
 
 
-interface NavTopProps extends DataProps {
+interface NavTopProps {
   title: string
+  data: DatasheetDeviceProps
 }
 
 const NavTop: React.FC<NavTopProps> = ({ title, data }) => {
@@ -37,22 +38,23 @@ const NavTop: React.FC<NavTopProps> = ({ title, data }) => {
     };
   }, [scrollPosition]);
 
-    const amazon = amazonPhonesPrice[data.map(data => { return data.id - 1 })[0]].split('R$')
-    const magalu = magaluPhonesPrice[data.map(data => { return data.id - 1 })[0]].split('R$ ')
-    const submarino = submarinoPhonesPrice[data.map(data => { return data.id - 1 })[0]].split('R$ ')
-    const americanas = americanasPhonesPrice[data.map(data => { return data.id - 1 })[0]].split('R$ ')
+    // const amazon = amazonPhonesPrice[data.map(data => { return data.id - 1 })[0]].split('R$')
+    // const magalu = magaluPhonesPrice[data.map(data => { return data.id - 1 })[0]].split('R$ ')
+    // const submarino = submarinoPhonesPrice[data.map(data => { return data.id - 1 })[0]].split('R$ ')
+    // const americanas = americanasPhonesPrice[data.map(data => { return data.id - 1 })[0]].split('R$ ')
   
   function sortfunction(a, b){
     return (a - b) //faz com que o array seja ordenado numericamente e de ordem crescente.
   }
     
-  const prices = [parseFloat(amazon[1]), parseFloat(magalu[1]), parseFloat(submarino[1]), parseFloat(americanas[1])]
-  const price = prices.sort(sortfunction)
-  const digitos = [amazon[1].replace('.', '').replace(',',''), magalu[1].replace('.', '').replace(',',''), submarino[1].replace('.', '').replace(',',''), americanas[1].replace('.', '').replace(',','')]
-  const digito = digitos.sort(sortfunction)
-  const subdigito = digito[0].substr(-2) 
+  // const prices = [parseFloat(amazon[1]), parseFloat(magalu[1]), parseFloat(submarino[1]), parseFloat(americanas[1])]
+  // const price = prices.sort(sortfunction)
+  // const digitos = [amazon[1].replace('.', '').replace(',',''), magalu[1].replace('.', '').replace(',',''), submarino[1].replace('.', '').replace(',',''), americanas[1].replace('.', '').replace(',','')]
+  // const digito = digitos.sort(sortfunction)
+  // const subdigito = digito[0].substr(-2) 
 
-  const lowestPrice = "R$ " + price[0] + "," + subdigito
+  // const lowestPrice = "R$ " + price[0] + "," + subdigito
+  const lowestPrice = "R$ ";
 
   return (
 

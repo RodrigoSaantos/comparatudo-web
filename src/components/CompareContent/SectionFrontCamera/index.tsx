@@ -11,183 +11,223 @@ const SectionFrontCamera: React.FC<InformationDevicesProps> = ({ deviceOne, devi
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].cameraFrontMP] : deviceOne.map(one => { return one.cameraFrontMP })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].cameraFrontMP] : deviceTwo.map(two => { return two.cameraFrontMP })}
-        labelThree={deviceThree.length === 0 ? [data[2].cameraFrontMP] : deviceThree.map(three => { return three.cameraFrontMP })}
+        labelOne={deviceOne.front_camera.mp}
+        labelTwo={deviceTwo.front_camera.mp}
+        labelThree={deviceThree.front_camera.mp}
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].cameraFrontOpening] : deviceOne.map(one => { return one.cameraFrontOpening })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].cameraFrontOpening] : deviceTwo.map(two => { return two.cameraFrontOpening })}
-        labelThree={deviceThree.length === 0 ? [data[2].cameraFrontOpening] : deviceThree.map(three => { return three.cameraFrontOpening })}
+        labelOne={deviceOne.front_camera.opening}
+        labelTwo={deviceTwo.front_camera.opening}
+        labelThree={deviceThree.front_camera.opening}
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].cameraFrontFlash] : deviceOne.map(one => { return one.cameraFrontFlash })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].cameraFrontFlash] : deviceTwo.map(two => { return two.cameraFrontFlash })}
-        labelThree={deviceThree.length === 0 ? [data[2].cameraFrontFlash] : deviceThree.map(three => { return three.cameraFrontFlash })}
+        labelOne={deviceOne.front_camera.flash}
+        labelTwo={deviceTwo.front_camera.flash}
+        labelThree={deviceThree.front_camera.flash}
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].cameraFrontModos] : deviceOne.map(one => { return one.cameraFrontModos })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].cameraFrontModos] : deviceTwo.map(two => { return two.cameraFrontModos })}
-        labelThree={deviceThree.length === 0 ? [data[2].cameraFrontModos] : deviceThree.map(three => { return three.cameraFrontModos })}
+        labelOne={deviceOne.front_camera.modos}
+        labelTwo={deviceTwo.front_camera.modos}
+        labelThree={deviceThree.front_camera.modos}
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].cameraFrontFeatures] : deviceOne.map(one => { return one.cameraFrontFeatures })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].cameraFrontFeatures] : deviceTwo.map(two => { return two.cameraFrontFeatures })}
-        labelThree={deviceThree.length === 0 ? [data[2].cameraFrontFeatures] : deviceThree.map(three => { return three.cameraFrontFeatures })}
+        labelOne={deviceOne.front_camera.features}
+        labelTwo={deviceTwo.front_camera.features}
+        labelThree={deviceThree.front_camera.features}
       />
 
-      {deviceOne.map(one => {return one.cameraFrontFeatures2.length}) >= [1] ? 
+      {deviceOne.front_camera.features2 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures2})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures2})}      
+        labelOne={deviceOne.front_camera.features2}
+        labelTwo={deviceTwo.front_camera.features2}
+        labelThree={deviceThree.front_camera.features2}      
       />
-      : deviceTwo.map(two => {return two.cameraFrontFeatures2.length}) >= [1] ?
+      : deviceTwo.front_camera.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures2})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures2})}      
+        labelOne={deviceOne.front_camera.features2}
+        labelTwo={deviceTwo.front_camera.features2}
+        labelThree={deviceThree.front_camera.features2}      
       />
 
-      : deviceThree.map(three => {return three.cameraFrontFeatures2.length}) >= [1] ?
+      : deviceThree.front_camera.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures2})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures2})}      
+        labelOne={deviceOne.front_camera.features2}
+        labelTwo={deviceTwo.front_camera.features2}
+        labelThree={deviceThree.front_camera.features2}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.cameraFrontFeatures3.length}) >= [1] ? 
+      {deviceOne.front_camera.features3 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures3})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures3})}      
+        labelOne={deviceOne.front_camera.features3}
+        labelTwo={deviceTwo.front_camera.features3}
+        labelThree={deviceThree.front_camera.features3}      
       />
-      : deviceTwo.map(two => {return two.cameraFrontFeatures3.length}) >= [1] ?
+      : deviceTwo.front_camera.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures3})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures3})}      
+        labelOne={deviceOne.front_camera.features3}
+        labelTwo={deviceTwo.front_camera.features3}
+        labelThree={deviceThree.front_camera.features3}      
       />
 
-      : deviceThree.map(three => {return three.cameraFrontFeatures3.length}) >= [1] ?
+      : deviceThree.front_camera.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures3})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures3})}      
+        labelOne={deviceOne.front_camera.features3}
+        labelTwo={deviceTwo.front_camera.features3}
+        labelThree={deviceThree.front_camera.features3}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.cameraFrontFeatures4.length}) >= [1] ? 
+      {deviceOne.front_camera.features4 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures4})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures4})}      
+        labelOne={deviceOne.front_camera.features4}
+        labelTwo={deviceTwo.front_camera.features4}
+        labelThree={deviceThree.front_camera.features4}      
       />
-      : deviceTwo.map(two => {return two.cameraFrontFeatures4.length}) >= [1] ?
+      : deviceTwo.front_camera.features4 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures4})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures4})}      
+        labelOne={deviceOne.front_camera.features4}
+        labelTwo={deviceTwo.front_camera.features4}
+        labelThree={deviceThree.front_camera.features4}      
       />
 
-      : deviceThree.map(three => {return three.cameraFrontFeatures4.length}) >= [1] ?
+      : deviceThree.front_camera.features4 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures4})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures4})}      
+        labelOne={deviceOne.front_camera.features4}
+        labelTwo={deviceTwo.front_camera.features4}
+        labelThree={deviceThree.front_camera.features4}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.cameraFrontFeatures5.length}) >= [1] ? 
+      {deviceOne.front_camera.features5 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures5})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures5})}      
+        labelOne={deviceOne.front_camera.features5}
+        labelTwo={deviceTwo.front_camera.features5}
+        labelThree={deviceThree.front_camera.features5}      
       />
-      : deviceTwo.map(two => {return two.cameraFrontFeatures5.length}) >= [1] ?
+      : deviceTwo.front_camera.features5 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures5})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures5})}      
+        labelOne={deviceOne.front_camera.features5}
+        labelTwo={deviceTwo.front_camera.features5}
+        labelThree={deviceThree.front_camera.features5}      
       />
 
-      : deviceThree.map(three => {return three.cameraFrontFeatures5.length}) >= [1] ?
+      : deviceThree.front_camera.features5 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures5})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures5})}      
+        labelOne={deviceOne.front_camera.features5}
+        labelTwo={deviceTwo.front_camera.features5}
+        labelThree={deviceThree.front_camera.features5}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.cameraFrontFeatures6.length}) >= [1] ? 
+      {deviceOne.front_camera.features6 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures6})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures6})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures6})}      
+        labelOne={deviceOne.front_camera.features6}
+        labelTwo={deviceTwo.front_camera.features6}
+        labelThree={deviceThree.front_camera.features6}      
       />
-      : deviceTwo.map(two => {return two.cameraFrontFeatures6.length}) >= [1] ?
+      : deviceTwo.front_camera.features6 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures6})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures6})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures6})}      
+        labelOne={deviceOne.front_camera.features6}
+        labelTwo={deviceTwo.front_camera.features6}
+        labelThree={deviceThree.front_camera.features6}      
       />
 
-      : deviceThree.map(three => {return three.cameraFrontFeatures6.length}) >= [1] ?
+      : deviceThree.front_camera.features6 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures6})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures6})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures6})}      
+        labelOne={deviceOne.front_camera.features6}
+        labelTwo={deviceTwo.front_camera.features6}
+        labelThree={deviceThree.front_camera.features6}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.cameraFrontFeatures7.length}) >= [1] ? 
+      {deviceOne.front_camera.features7 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures7})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures7})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures7})}      
+        labelOne={deviceOne.front_camera.features7}
+        labelTwo={deviceTwo.front_camera.features7}
+        labelThree={deviceThree.front_camera.features7}      
       />
-      : deviceTwo.map(two => {return two.cameraFrontFeatures7.length}) >= [1] ?
+      : deviceTwo.front_camera.features7 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures7})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures7})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures7})}      
+        labelOne={deviceOne.front_camera.features7}
+        labelTwo={deviceTwo.front_camera.features7}
+        labelThree={deviceThree.front_camera.features7}      
       />
 
-      : deviceThree.map(three => {return three.cameraFrontFeatures7.length}) >= [1] ?
+      : deviceThree.front_camera.features7 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures7})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures7})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures7})}      
+        labelOne={deviceOne.front_camera.features7}
+        labelTwo={deviceTwo.front_camera.features7}
+        labelThree={deviceThree.front_camera.features7}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.cameraFrontFeatures8.length}) >= [1] ? 
+      {deviceOne.front_camera.features8 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures8})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures8})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures8})}      
+        labelOne={deviceOne.front_camera.features8}
+        labelTwo={deviceTwo.front_camera.features8}
+        labelThree={deviceThree.front_camera.features8}      
       />
-      : deviceTwo.map(two => {return two.cameraFrontFeatures8.length}) >= [1] ?
+      : deviceTwo.front_camera.features8 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures8})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures8})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures8})}      
+        labelOne={deviceOne.front_camera.features8}
+        labelTwo={deviceTwo.front_camera.features8}
+        labelThree={deviceThree.front_camera.features8}      
       />
 
-      : deviceThree.map(three => {return three.cameraFrontFeatures8.length}) >= [1] ?
+      : deviceThree.front_camera.features8 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.cameraFrontFeatures8})}
-        labelTwo={deviceTwo.map(two => {return two.cameraFrontFeatures8})}
-        labelThree={deviceThree.map(three => {return three.cameraFrontFeatures8})}      
+        labelOne={deviceOne.front_camera.features8}
+        labelTwo={deviceTwo.front_camera.features8}
+        labelThree={deviceThree.front_camera.features8}      
       />
       : '' }
 
+      {deviceOne.front_camera.features9 ? 
+      <SectionRows
+        labelOne={deviceOne.front_camera.features9}
+        labelTwo={deviceTwo.front_camera.features9}
+        labelThree={deviceThree.front_camera.features9}      
+      />
+      : deviceTwo.front_camera.features9 ?
+      <SectionRows
+        labelOne={deviceOne.front_camera.features9}
+        labelTwo={deviceTwo.front_camera.features9}
+        labelThree={deviceThree.front_camera.features9}      
+      />
 
+      : deviceThree.front_camera.features9 ?
+      <SectionRows
+        labelOne={deviceOne.front_camera.features9}
+        labelTwo={deviceTwo.front_camera.features9}
+        labelThree={deviceThree.front_camera.features9}      
+      />
+      : '' }
+
+      {deviceOne.front_camera.features10 ? 
+      <SectionRows
+        labelOne={deviceOne.front_camera.features10}
+        labelTwo={deviceTwo.front_camera.features10}
+        labelThree={deviceThree.front_camera.features10}      
+      />
+      : deviceTwo.front_camera.features10 ?
+      <SectionRows
+        labelOne={deviceOne.front_camera.features10}
+        labelTwo={deviceTwo.front_camera.features10}
+        labelThree={deviceThree.front_camera.features10}      
+      />
+
+      : deviceThree.front_camera.features10 ?
+      <SectionRows
+        labelOne={deviceOne.front_camera.features10}
+        labelTwo={deviceTwo.front_camera.features10}
+        labelThree={deviceThree.front_camera.features10}      
+      />
+      : '' }
 
     </div>
   )

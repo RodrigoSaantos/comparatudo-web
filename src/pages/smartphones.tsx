@@ -19,19 +19,19 @@ const Smartphones = ({allDevices}) => {
 
   const [listPhones, setListPhones] = useState(allDevices)
 
+  // useEffect(() => {
+
+  //   api.get('allphones').then(response => {
+
+  //     const total = response.data
+  //     setListPhones(total)
+  //   })
+
+  // }, [])
+
   useEffect(() => {
 
-    api.get('allphones').then(response => {
-
-      const total = response.data
-      setListPhones(total)
-    })
-
-  }, [])
-
-  useEffect(() => {
-
-    api.get('search', {
+    api.get('smartphones/search', {
       params: {
         search
       }
@@ -47,7 +47,7 @@ const Smartphones = ({allDevices}) => {
 
     e.preventDefault()
 
-    const response = await api.get('search', {
+    const response = await api.get('smartphones/search', {
       params: {
           search
       }
@@ -109,7 +109,7 @@ export default Smartphones
 export const getStaticProps:GetStaticProps = async () => {
 
   // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_BASE}/search?search=`)
-  const response = await api.get('search?search=')
+  const response = await api.get('smartphones/search?search=')
 
   const data = await response.data
   return {

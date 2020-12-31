@@ -11,152 +11,148 @@ const SectionVideoRecording: React.FC<InformationDevicesProps> = ({ deviceOne, d
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].videoResolution] : deviceOne.map(one => { return one.videoResolution })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].videoResolution] : deviceTwo.map(two => { return two.videoResolution })}
-        labelThree={deviceThree.length === 0 ? [data[2].videoResolution] : deviceThree.map(three => { return three.videoResolution })}
+        labelOne={deviceOne.video_recording.resolution}
+        labelTwo={deviceTwo.video_recording.resolution}
+        labelThree={deviceThree.video_recording.resolution}
       />
 
-      {deviceOne.map(one => { return one.videoStabilizationOptical.length }) >= [1] ?
+      {deviceOne.video_recording.estabilization ?
         <SectionRows
-          labelOne={deviceOne.length === 0 ? [data[0].videoStabilizationOptical] : deviceOne.map(one => { return one.videoStabilizationOptical })}
-          labelTwo={deviceTwo.length === 0 ? [data[1].videoStabilizationOptical] : deviceTwo.map(two => { return two.videoStabilizationOptical })}
-          labelThree={deviceThree.length === 0 ? [data[2].videoStabilizationOptical] : deviceThree.map(three => { return three.videoStabilizationOptical })}
+          labelOne={deviceOne.video_recording.estabilization}
+          labelTwo={deviceTwo.video_recording.estabilization}
+          labelThree={deviceThree.video_recording.estabilization}
         />
-        : deviceTwo.map(two => { return two.videoZoomFeatures.length }) >= [1] ?
+        : deviceTwo.video_recording.estabilization ?
           <SectionRows
-            labelOne={deviceOne.length === 0 ? [data[0].videoStabilizationOptical] : deviceOne.map(one => { return one.videoStabilizationOptical })}
-            labelTwo={deviceTwo.length === 0 ? [data[1].videoStabilizationOptical] : deviceTwo.map(two => { return two.videoStabilizationOptical })}
-            labelThree={deviceThree.length === 0 ? [data[2].videoStabilizationOptical] : deviceThree.map(three => { return three.videoStabilizationOptical })}
+            labelOne={deviceOne.video_recording.estabilization}
+            labelTwo={deviceTwo.video_recording.estabilization}
+            labelThree={deviceThree.video_recording.estabilization}
           />
 
-          : deviceThree.map(three => { return three.videoZoomFeatures.length }) >= [1] ?
+          : deviceThree.video_recording.estabilization ?
             <SectionRows
-              labelOne={deviceOne.length === 0 ? [data[0].videoStabilizationOptical] : deviceOne.map(one => { return one.videoStabilizationOptical })}
-              labelTwo={deviceTwo.length === 0 ? [data[1].videoStabilizationOptical] : deviceTwo.map(two => { return two.videoStabilizationOptical })}
-              labelThree={deviceThree.length === 0 ? [data[2].videoStabilizationOptical] : deviceThree.map(three => { return three.videoStabilizationOptical })}
+              labelOne={deviceOne.video_recording.estabilization}
+              labelTwo={deviceTwo.video_recording.estabilization}
+              labelThree={deviceThree.video_recording.estabilization}
             />
             : ''}
 
-      {deviceOne.map(one => { return one.videoZoom.length }) >= [1] ?
+      {deviceOne.video_recording.zoom ?
         <SectionRows
-          labelOne={deviceOne.length === 0 ? [data[0].videoZoom] : deviceOne.map(one => { return one.videoZoom })}
-          labelTwo={deviceTwo.length === 0 ? [data[1].videoZoom] : deviceTwo.map(two => { return two.videoZoom })}
-          labelThree={deviceThree.length === 0 ? [data[2].videoZoom] : deviceThree.map(three => { return three.videoZoom })}
+          labelOne={deviceOne.video_recording.zoom}
+          labelTwo={deviceTwo.video_recording.zoom}
+          labelThree={deviceThree.video_recording.zoom}
         />
-        : deviceTwo.map(two => { return two.videoZoom.length }) >= [1] ?
+        : deviceTwo.video_recording.zoom ?
           <SectionRows
-            labelOne={deviceOne.length === 0 ? [data[0].videoZoom] : deviceOne.map(one => { return one.videoZoom })}
-            labelTwo={deviceTwo.length === 0 ? [data[1].videoZoom] : deviceTwo.map(two => { return two.videoZoom })}
-            labelThree={deviceThree.length === 0 ? [data[2].videoZoom] : deviceThree.map(three => { return three.videoZoom })}
+            labelOne={deviceOne.video_recording.zoom}
+            labelTwo={deviceTwo.video_recording.zoom}
+            labelThree={deviceThree.video_recording.zoom}
           />
 
-          : deviceThree.map(three => { return three.videoZoom.length }) >= [1] ?
+          : deviceThree.video_recording.zoom ?
             <SectionRows
-              labelOne={deviceOne.length === 0 ? [data[0].videoZoom] : deviceOne.map(one => { return one.videoZoom })}
-              labelTwo={deviceTwo.length === 0 ? [data[1].videoZoom] : deviceTwo.map(two => { return two.videoZoom })}
-              labelThree={deviceThree.length === 0 ? [data[2].videoZoom] : deviceThree.map(three => { return three.videoZoom })}
+              labelOne={deviceOne.video_recording.zoom}
+              labelTwo={deviceTwo.video_recording.zoom}
+              labelThree={deviceThree.video_recording.zoom}
             />
             : ''}
-
-      {deviceOne.map(one => { return one.videoZoomFeatures.length }) >= [1] ?
-        <SectionRows
-          labelOne={deviceOne.map(one => { return one.videoZoomFeatures })}
-          labelTwo={deviceTwo.map(two => { return two.videoZoomFeatures })}
-          labelThree={deviceThree.map(three => { return three.videoZoomFeatures })}
-        />
-        : deviceTwo.map(two => { return two.videoZoomFeatures.length }) >= [1] ?
-          <SectionRows
-            labelOne={deviceOne.map(one => { return one.videoZoomFeatures })}
-            labelTwo={deviceTwo.map(two => { return two.videoZoomFeatures })}
-            labelThree={deviceThree.map(three => { return three.videoZoomFeatures })}
-          />
-
-          : deviceThree.map(three => { return three.videoZoomFeatures.length }) >= [1] ?
-            <SectionRows
-              labelOne={deviceOne.map(one => { return one.videoZoomFeatures })}
-              labelTwo={deviceTwo.map(two => { return two.videoZoomFeatures })}
-              labelThree={deviceThree.map(three => { return three.videoZoomFeatures })}
-            />
-            : ''}
-
-
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].videoSlowMotion] : deviceOne.map(one => { return one.videoSlowMotion })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].videoSlowMotion] : deviceTwo.map(two => { return two.videoSlowMotion })}
-        labelThree={deviceThree.length === 0 ? [data[2].videoSlowMotion] : deviceThree.map(three => { return three.videoSlowMotion })}
+        labelOne={deviceOne.video_recording.slowMotion}
+        labelTwo={deviceTwo.video_recording.slowMotion}
+        labelThree={deviceThree.video_recording.slowMotion}
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].videoFeatures] : deviceOne.map(one => { return one.videoFeatures })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].videoFeatures] : deviceTwo.map(two => { return two.videoFeatures })}
-        labelThree={deviceThree.length === 0 ? [data[2].videoFeatures] : deviceThree.map(three => { return three.videoFeatures })}
+        labelOne={deviceOne.video_recording.features}
+        labelTwo={deviceTwo.video_recording.features}
+        labelThree={deviceThree.video_recording.features}
       />
 
-      {deviceOne.map(one => { return one.videoFeatures2.length }) >= [1] ?
+      {deviceOne.video_recording.features2 ?
         <SectionRows
-          labelOne={deviceOne.map(one => { return one.videoFeatures2 })}
-          labelTwo={deviceTwo.map(two => { return two.videoFeatures2 })}
-          labelThree={deviceThree.map(three => { return three.videoFeatures2 })}
+          labelOne={deviceOne.video_recording.features2}
+          labelTwo={deviceTwo.video_recording.features2}
+          labelThree={deviceThree.video_recording.features2}
         />
-        : deviceTwo.map(two => { return two.videoFeatures2.length }) >= [1] ?
+        : deviceTwo.video_recording.features2 ?
           <SectionRows
-            labelOne={deviceOne.map(one => { return one.videoFeatures2 })}
-            labelTwo={deviceTwo.map(two => { return two.videoFeatures2 })}
-            labelThree={deviceThree.map(three => { return three.videoFeatures2 })}
+            labelOne={deviceOne.video_recording.features2}
+            labelTwo={deviceTwo.video_recording.features2}
+            labelThree={deviceThree.video_recording.features2}
           />
 
-          : deviceThree.map(three => { return three.videoFeatures2.length }) >= [1] ?
+          : deviceThree.video_recording.features2?
             <SectionRows
-              labelOne={deviceOne.map(one => { return one.videoFeatures2 })}
-              labelTwo={deviceTwo.map(two => { return two.videoFeatures2 })}
-              labelThree={deviceThree.map(three => { return three.videoFeatures2 })}
+              labelOne={deviceOne.video_recording.features2}
+              labelTwo={deviceTwo.video_recording.features2}
+              labelThree={deviceThree.video_recording.features2}
             />
             : ''}
 
-      {deviceOne.map(one => { return one.videoFeatures3.length }) >= [1] ?
+      {deviceOne.video_recording.features3 ?
         <SectionRows
-          labelOne={deviceOne.map(one => { return one.videoFeatures3 })}
-          labelTwo={deviceTwo.map(two => { return two.videoFeatures3 })}
-          labelThree={deviceThree.map(three => { return three.videoFeatures3 })}
+          labelOne={deviceOne.video_recording.features3}
+          labelTwo={deviceTwo.video_recording.features3}
+          labelThree={deviceThree.video_recording.features3}
         />
-        : deviceTwo.map(two => { return two.videoFeatures3.length }) >= [1] ?
+        : deviceTwo.video_recording.features3 ?
           <SectionRows
-            labelOne={deviceOne.map(one => { return one.videoFeatures3 })}
-            labelTwo={deviceTwo.map(two => { return two.videoFeatures3 })}
-            labelThree={deviceThree.map(three => { return three.videoFeatures3 })}
+            labelOne={deviceOne.video_recording.features3}
+            labelTwo={deviceTwo.video_recording.features3}
+            labelThree={deviceThree.video_recording.features3}
           />
 
-          : deviceThree.map(three => { return three.videoFeatures3.length }) >= [1] ?
+          : deviceThree.video_recording.features3 ?
             <SectionRows
-              labelOne={deviceOne.map(one => { return one.videoFeatures3 })}
-              labelTwo={deviceTwo.map(two => { return two.videoFeatures3 })}
-              labelThree={deviceThree.map(three => { return three.videoFeatures3 })}
+              labelOne={deviceOne.video_recording.features3}
+              labelTwo={deviceTwo.video_recording.features3}
+              labelThree={deviceThree.video_recording.features3}
             />
             : ''}
 
-      {deviceOne.map(one => { return one.videoFeatures4.length }) >= [1] ?
+      {deviceOne.video_recording.features4 ?
         <SectionRows
-          labelOne={deviceOne.map(one => { return one.videoFeatures4 })}
-          labelTwo={deviceTwo.map(two => { return two.videoFeatures4 })}
-          labelThree={deviceThree.map(three => { return three.videoFeatures4 })}
+          labelOne={deviceOne.video_recording.features4}
+          labelTwo={deviceTwo.video_recording.features4}
+          labelThree={deviceThree.video_recording.features4}
         />
-        : deviceTwo.map(two => { return two.videoFeatures4.length }) >= [1] ?
+        : deviceTwo.video_recording.features4 ?
           <SectionRows
-            labelOne={deviceOne.map(one => { return one.videoFeatures4 })}
-            labelTwo={deviceTwo.map(two => { return two.videoFeatures4 })}
-            labelThree={deviceThree.map(three => { return three.videoFeatures4 })}
+            labelOne={deviceOne.video_recording.features4}
+            labelTwo={deviceTwo.video_recording.features4}
+            labelThree={deviceThree.video_recording.features4}
           />
 
-          : deviceThree.map(three => { return three.videoFeatures4.length }) >= [1] ?
+          : deviceThree.video_recording.features4 ?
             <SectionRows
-              labelOne={deviceOne.map(one => { return one.videoFeatures4 })}
-              labelTwo={deviceTwo.map(two => { return two.videoFeatures4 })}
-              labelThree={deviceThree.map(three => { return three.videoFeatures4 })}
+              labelOne={deviceOne.video_recording.features4}
+              labelTwo={deviceTwo.video_recording.features4}
+              labelThree={deviceThree.video_recording.features4}
             />
             : ''}
 
+      {deviceOne.video_recording.features5 ?
+        <SectionRows
+          labelOne={deviceOne.video_recording.features5}
+          labelTwo={deviceTwo.video_recording.features5}
+          labelThree={deviceThree.video_recording.features5}
+        />
+        : deviceTwo.video_recording.features5 ?
+          <SectionRows
+            labelOne={deviceOne.video_recording.features5}
+            labelTwo={deviceTwo.video_recording.features5}
+            labelThree={deviceThree.video_recording.features5}
+          />
 
+          : deviceThree.video_recording.features5 ?
+            <SectionRows
+              labelOne={deviceOne.video_recording.features5}
+              labelTwo={deviceTwo.video_recording.features5}
+              labelThree={deviceThree.video_recording.features5}
+            />
+            : ''}
 
     </div>
   )

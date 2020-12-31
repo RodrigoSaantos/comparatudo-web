@@ -96,24 +96,24 @@ div.compare-column.compare-column-three figure.image-icon-system {
 }
 
 /* ICON ANDROID */
-div.compare-column.compare-column-one figure.image-icon-system.iconAndroid {
+div.compare-column.compare-column-one figure.image-icon-system.Android {
     background-image: url(${androidIcon});
 }
-div.compare-column.compare-column-two figure.image-icon-system.iconAndroid {
+div.compare-column.compare-column-two figure.image-icon-system.Android {
     background-image: url(${androidIcon});
 }
-div.compare-column.compare-column-three figure.image-icon-system.iconAndroid {
+div.compare-column.compare-column-three figure.image-icon-system.Android {
     background-image: url(${androidIcon});
 }
 
 /* ICON APPLE */
-div.compare-column.compare-column-one figure.image-icon-system.iconApple {
+div.compare-column.compare-column-one figure.image-icon-system.iOS {
     background-image: url(${appleIcon});
 }
-div.compare-column.compare-column-two figure.image-icon-system.iconApple {
+div.compare-column.compare-column-two figure.image-icon-system.iOS {
     background-image: url(${appleIcon});
 }
-div.compare-column.compare-column-three figure.image-icon-system.iconApple {
+div.compare-column.compare-column-three figure.image-icon-system.iOS {
     background-image: url(${appleIcon});
 }
 

@@ -226,83 +226,27 @@ const CompareContent: React.FC<DataProps> = ({ data }) => {
   const [theThreeDevices, setTheThreeDevices] = useState<DatasheetProps>(data[2])
 
 
-  const [listIphonesColumn1, setListIphonesColumn1] = useState([])
-  const [listIphonesColumn2, setListIphonesColumn2] = useState([])
-  const [listIphonesColumn3, setListIphonesColumn3] = useState([])
-
-  const [listSamsungsColumn1, setListSamsungsColumn1] = useState([])
-  const [listSamsungsColumn2, setListSamsungsColumn2] = useState([])
-  const [listSamsungsColumn3, setListSamsungsColumn3] = useState([])
-
+  const [listIphones, setListIphones] = useState([])
 
   useEffect(() => {
-    api.get('smartphones/listiphone/column1', {
-      params: {
-        device2,
-        device3,
-      }
-    }).then(response => {
+    api.get('smartphones/listiphone').then(response => {
+
       const iphones = response.data
-      setListIphonesColumn1(iphones)
+      setListIphones(iphones)
+
     })
+  }, [])
 
-    api.get('smartphones/listiphone/column2', {
-      params: {
-        device1,
-        device3,
-      }
-    }).then(response => {
-      const iphones = response.data
-      setListIphonesColumn2(iphones)
-    })
-
-    api.get('smartphones/listiphone/column3', {
-      params: {
-        device1,
-        device2,
-      }
-    }).then(response => {
-      const iphones = response.data
-      setListIphonesColumn3(iphones)
-    })
-
-
-  }, [device1, device2, device3])
-
+  const [listSamsungs, setListSamsungs] = useState([])
 
   useEffect(() => {
-    api.get('smartphones/listsamsung/column1', {
-      params: {
-        device2,
-        device3,
-      }
-    }).then(response => {
+    api.get('smartphones/listsamsung').then(response => {
+
       const samsung = response.data
-      setListSamsungsColumn1(samsung)
+      setListSamsungs(samsung)
+
     })
-
-    api.get('smartphones/listsamsung/column2', {
-      params: {
-        device1,
-        device3,
-      }
-    }).then(response => {
-      const samsung = response.data
-      setListSamsungsColumn2(samsung)
-    })
-
-    api.get('smartphones/listsamsung/column3', {
-      params: {
-        device1,
-        device2,
-      }
-    }).then(response => {
-      const samsung = response.data
-      setListSamsungsColumn3(samsung)
-    })
-
-
-  }, [device1, device2, device3])
+  }, [])
 
   useEffect(() => {
         api.get('smartphones/compare1', {
@@ -393,7 +337,7 @@ const CompareContent: React.FC<DataProps> = ({ data }) => {
               >
                 <option value="" disabled hidden>{data[0].name} </option>
                 <optgroup label="Modelos de iPhone">
-                  {listIphonesColumn1.map((listIphone: ListPhone) => {
+                  {listIphones.map((listIphone: ListPhone) => {
                     return (
                       <option key={listIphone.modelo} value={listIphone.modelo}>{listIphone.name}</option>
                     )
@@ -401,7 +345,7 @@ const CompareContent: React.FC<DataProps> = ({ data }) => {
                 </optgroup>
 
                 <optgroup label="Modelos de Galaxy">
-                  {listSamsungsColumn1.map((listSamsung: ListPhone) => {
+                  {listSamsungs.map((listSamsung: ListPhone) => {
                     return (
                       <option key={listSamsung.modelo} value={listSamsung.modelo}>{listSamsung.name}</option>
                     )
@@ -424,7 +368,7 @@ const CompareContent: React.FC<DataProps> = ({ data }) => {
                 <option value="" disabled hidden>{data[1].name}</option>
 
                 <optgroup label="Modelos de iPhone">
-                  {listIphonesColumn2.map((listIphone: ListPhone) => {
+                  {listIphones.map((listIphone: ListPhone) => {
                     return (
                       <option key={listIphone.modelo} value={listIphone.modelo}>{listIphone.name}</option>
                     )
@@ -432,7 +376,7 @@ const CompareContent: React.FC<DataProps> = ({ data }) => {
                 </optgroup>
 
                 <optgroup label="Modelos de Galaxy">
-                  {listSamsungsColumn2.map((listSamsung: ListPhone) => {
+                  {listSamsungs.map((listSamsung: ListPhone) => {
                     return (
                       <option key={listSamsung.modelo} value={listSamsung.modelo}>{listSamsung.name}</option>
                     )
@@ -456,7 +400,7 @@ const CompareContent: React.FC<DataProps> = ({ data }) => {
                 <option value="" disabled hidden>{data[2].name}</option>
 
                 <optgroup label="Modelos de iPhone">
-                  {listIphonesColumn3.map((listIphone: ListPhone) => {
+                  {listIphones.map((listIphone: ListPhone) => {
                     return (
                       <option key={listIphone.modelo} value={listIphone.modelo}>{listIphone.name}</option>
                     )
@@ -464,7 +408,7 @@ const CompareContent: React.FC<DataProps> = ({ data }) => {
                 </optgroup>
 
                 <optgroup label="Modelos de Galaxy">
-                  {listSamsungsColumn3.map((listSamsung: ListPhone) => {
+                  {listSamsungs.map((listSamsung: ListPhone) => {
                     return (
                       <option key={listSamsung.modelo} value={listSamsung.modelo}>{listSamsung.name}</option>
                     )

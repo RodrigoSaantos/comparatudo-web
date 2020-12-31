@@ -17,30 +17,30 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
           <div className="compare-column compare-column-one">
             <figure className="icon-badge display">
               <p className="text-bold">
-              {deviceOne.length === 0 ? [data[0].display] : deviceOne.map(one => {return one.display})}
+              {deviceOne.summary.display}
               </p>
               <p className="text-bold-title">
-              {deviceOne.length === 0 ? [data[0].polegada] : deviceOne.map(one => {return one.polegada})}
+              {deviceOne.summary.polegada}
               </p>
             </figure>
           </div>
           <div className="compare-column compare-column-two">
             <figure className="icon-badge display">
               <p className="text-bold">
-              {deviceTwo.length === 0 ? [data[1].display] : deviceTwo.map(two => {return two.display})}
+              {deviceTwo.summary.display}
               </p>
               <p className="text-bold-title">
-              {deviceTwo.length === 0 ? [data[1].polegada] : deviceTwo.map(two => {return two.polegada})}
+              {deviceTwo.summary.polegada}
               </p>
             </figure>
           </div>
           <div className="compare-column compare-column-three">
             <figure className="icon-badge display">
               <p className="text-bold">
-              {deviceThree.length === 0 ? [data[2].display] : deviceThree.map(three => {return three.display})}
+              {deviceThree.summary.display}
               </p>
               <p className="text-bold-title">
-              {deviceThree.length === 0 ? [data[2].polegada] : deviceThree.map(three => {return three.polegada})}
+              {deviceThree.summary.polegada}
               </p>
             </figure>
           </div>
@@ -48,27 +48,27 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
 
         <div className="compare-row">
           <div className="compare-column compare-column-one">
-            <figure className={deviceOne.map(one => {return one.iconSystem})[0] ? "image-icon-system " + deviceOne.map(one => {return one.iconSystem})[0] : "image-icon-system" }>
+            <figure className={deviceOne.icon.system ? "image-icon-system " + deviceOne.icon.system : "image-icon-system" }>
             </figure>
             <p className="text-bold">
-            {deviceOne.length === 0 ? [data[0].systemVersion] : deviceOne.map(one => {return one.systemVersion})}<br />
-            {deviceOne.length === 0 ? [data[0].year] : deviceOne.map(one => {return one.year})}
+            {deviceOne.summary.system}<br />
+            {deviceOne.summary.year}
             </p>
           </div>
           <div className="compare-column compare-column-two">
-            <figure className={deviceTwo.map(two => {return two.iconSystem})[0] ? "image-icon-system " + deviceTwo.map(two => {return two.iconSystem})[0] : "image-icon-system" }>
+            <figure className={deviceTwo.icon.system ? "image-icon-system " + deviceTwo.icon.system : "image-icon-system" }>
             </figure>
             <p className="text-bold">
-            {deviceTwo.length === 0 ? [data[1].systemVersion] : deviceTwo.map(two => {return two.systemVersion})} <br/>
-            {deviceTwo.length === 0 ? [data[1].year] : deviceTwo.map(two => {return two.year})}
+            {deviceTwo.summary.system} <br/>
+            {deviceTwo.summary.year}
             </p>
           </div>
           <div className="compare-column compare-column-three">
-            <figure className={deviceThree.map(three => {return three.iconSystem})[0] ? "image-icon-system " + deviceThree.map(three => {return three.iconSystem})[0] : "image-icon-system" }>
+            <figure className={deviceThree.icon.system ? "image-icon-system " + deviceThree.icon.system : "image-icon-system" }>
             </figure>
             <p className="text-bold">
-            {deviceThree.length === 0 ? [data[2].systemVersion] : deviceThree.map(three => {return three.systemVersion})} <br/>
-            {deviceThree.length === 0 ? [data[2].year] : deviceThree.map(three => {return three.year})}
+            {deviceThree.summary.system} <br/>
+            {deviceThree.summary.year}
             </p>
           </div>
         </div>
@@ -77,21 +77,21 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
           <div className="compare-column compare-column-one">
             <figure className="icon-badge">
               <p className="text-bold">
-              {deviceOne.length === 0 ? [data[0].structure] : deviceOne.map(one => {return one.structure})}
+              {deviceOne.summary.structure}
               </p>
             </figure>
           </div>
           <div className="compare-column compare-column-two">
             <figure className="icon-badge">
               <p className="text-bold">
-              {deviceTwo.length === 0 ? [data[1].structure] : deviceTwo.map(two => {return two.structure})}
+              {deviceTwo.summary.structure}
               </p>
             </figure>
           </div>
           <div className="compare-column compare-column-three">
             <figure className="icon-badge">
               <p className="text-bold">
-              {deviceThree.length === 0 ? [data[2].structure] : deviceThree.map(three => {return three.structure})}
+              {deviceThree.summary.structure}
               </p>
             </figure>
           </div>
@@ -99,24 +99,24 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
 
         <div className="compare-row">
           <div className="compare-column compare-column-one">
-            <figure className={deviceOne.map(one => {return one.modelo})[0] ? "image-icon-camera " + deviceOne.map(one => {return one.modelo})[0] : "image-icon-camera" }>
+            <figure className={deviceOne.modelo ? "image-icon-camera " + deviceOne.modelo : "image-icon-camera" }>
             </figure>
             <p className="text-bold">
-            {deviceOne.length === 0 ? [data[0].cameraBack] : deviceOne.map(one => {return one.cameraBack})}
+            {deviceOne.summary.camera}
             </p>
           </div>
           <div className="compare-column compare-column-two">
-            <figure className={deviceTwo.map(two => {return two.modelo})[0] ? "image-icon-camera " + deviceTwo.map(two => {return two.modelo})[0] : "image-icon-camera" }>
+            <figure className={deviceTwo.modelo ? "image-icon-camera " + deviceTwo.modelo : "image-icon-camera" }>
             </figure>
             <p className="text-bold">
-            {deviceTwo.length === 0 ? [data[1].cameraBack] : deviceTwo.map(two => {return two.cameraBack})}
+            {deviceTwo.summary.camera}
             </p>
           </div>
           <div className="compare-column compare-column-three">
-            <figure className={deviceThree.map(three => {return three.modelo})[0] ? "image-icon-camera " + deviceThree.map(three => {return three.modelo})[0] : "image-icon-camera" }>
+            <figure className={deviceThree.modelo ? "image-icon-camera " + deviceThree.modelo : "image-icon-camera" }>
             </figure>
             <p className="text-bold">
-            {deviceThree.length === 0 ? [data[2].cameraBack] : deviceThree.map(three => {return three.cameraBack})}
+            {deviceThree.summary.camera}
               
             </p>
           </div>
@@ -129,7 +129,7 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
                 Câmera Frontal
               </p>
               <p className="text-bold">
-              {deviceOne.length === 0 ? [data[0].cameraFront] : deviceOne.map(one => {return one.cameraFront})}
+              {deviceOne.summary.cameraFront}
               </p>
             </figure>
           </div>
@@ -139,7 +139,7 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
                 Câmera Frontal
               </p>
               <p className="text-bold">
-              {deviceTwo.length === 0 ? [data[1].cameraFront] : deviceTwo.map(two => {return two.cameraFront})}
+              {deviceTwo.summary.cameraFront}
               </p>
             </figure>
           </div>
@@ -149,7 +149,7 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
                 Câmera Frontal
               </p>
               <p className="text-bold">
-              {deviceThree.length === 0 ? [data[2].cameraFront] : deviceThree.map(three => {return three.cameraFront})}
+              {deviceThree.summary.cameraFront}
               </p>
             </figure>
           </div>
@@ -157,24 +157,24 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
 
         <div className="compare-row">
           <div className="compare-column compare-column-one">
-            <figure className={deviceOne.map(one => {return one.iconLock})[0] ? "image-icon-lock " + deviceOne.map(one => {return one.iconLock})[0] : "image-icon-lock" }>
+            <figure className={deviceOne.icon.lock ? "image-icon-lock " + deviceOne.icon.lock : "image-icon-lock" }>
             </figure>
             <p className="text-bold">
-            {deviceOne.length === 0 ? [data[0].block] : deviceOne.map(one => {return one.block})}
+            {deviceOne.summary.lock}
             </p>
           </div>
           <div className="compare-column compare-column-two">
-            <figure className={deviceTwo.map(two => {return two.iconLock})[0] ? "image-icon-lock " + deviceTwo.map(two => {return two.iconLock})[0] : "image-icon-lock" }>
+            <figure className={deviceTwo.icon.lock ? "image-icon-lock " + deviceTwo.icon.lock : "image-icon-lock" }>
             </figure>
             <p className="text-bold">
-            {deviceTwo.length === 0 ? [data[1].block] : deviceTwo.map(two => {return two.block})}
+            {deviceTwo.summary.lock}
             </p>
           </div>
           <div className="compare-column compare-column-three">
-            <figure className={deviceThree.map(three => {return three.iconLock})[0] ? "image-icon-lock " + deviceThree.map(three => {return three.iconLock})[0] : "image-icon-lock" }>
+            <figure className={deviceThree.icon.lock ? "image-icon-lock " + deviceThree.icon.lock : "image-icon-lock" }>
             </figure>
             <p className="text-bold">
-            {deviceThree.length === 0 ? [data[2].block] : deviceThree.map(three => {return three.block})}
+            {deviceThree.summary.lock}
             </p>
           </div>
         </div>
@@ -182,29 +182,29 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
         <div className="compare-row">
           <div className="compare-column compare-column-one">
             <IconChip>
-            <figure className={deviceOne.map(one => {return one.iconChip})[0] ? "image-icon-chip " + deviceOne.map(one => {return one.iconChip})[0] : "image-icon-chip" }>
+            <figure className={deviceOne.icon.chip ? "image-icon-chip " + deviceOne.icon.chip : "image-icon-chip" }>
             </figure>
             </IconChip>
             <p className="text-bold">
-            {deviceOne.length === 0 ? [data[0].chip] : deviceOne.map(one => {return one.chip})}
+            {deviceOne.summary.chip}
             </p>
           </div>
           <div className="compare-column compare-column-two">
             <IconChip>
-            <figure className={deviceTwo.map(two => {return two.iconChip})[0] ? "image-icon-chip " + deviceTwo.map(two => {return two.iconChip})[0] : "image-icon-chip" }>
+            <figure className={deviceTwo.icon.chip ? "image-icon-chip " + deviceTwo.icon.chip : "image-icon-chip" }>
             </figure>
             </IconChip>
             <p className="text-bold">
-            {deviceTwo.length === 0 ? [data[1].chip] : deviceTwo.map(two => {return two.chip})}
+            {deviceTwo.summary.chip}
             </p>
           </div>
           <div className="compare-column compare-column-three">
             <IconChip>
-            <figure className={deviceThree.map(three => {return three.iconChip})[0] ? "image-icon-chip " + deviceThree.map(three => {return three.iconChip})[0] : "image-icon-chip" }>
+            <figure className={deviceThree.icon.chip ? "image-icon-chip " + deviceThree.icon.chip : "image-icon-chip" }>
             </figure>
             </IconChip>
             <p className="text-bold">
-            {deviceThree.length === 0 ? [data[2].chip] : deviceThree.map(three => {return three.chip})}
+            {deviceThree.summary.chip}
             </p>
           </div>
         </div>
@@ -214,54 +214,54 @@ const SectionSummary: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo
             <figure className="image-icon-battery">
             </figure>
             <p className="text-bold">
-            {deviceOne.length === 0 ? [data[0].battery] : deviceOne.map(one => {return one.battery})}
+            {deviceOne.summary.battery}
             </p>
           </div>
           <div className="compare-column compare-column-two">
             <figure className="image-icon-battery">
             </figure>
             <p className="text-bold">
-            {deviceTwo.length === 0 ? [data[1].battery] : deviceTwo.map(two => {return two.battery})}
+            {deviceTwo.summary.battery}
             </p>
           </div>
           <div className="compare-column compare-column-three">
             <figure className="image-icon-battery">
             </figure>
             <p className="text-bold">
-            {deviceThree.length === 0 ? [data[2].battery] : deviceThree.map(three => {return three.battery})}
+            {deviceThree.summary.battery}
             </p>
           </div>
         </div>
 
         <div className="compare-row">
           <div className="compare-column compare-column-one">
-            <figure className={deviceOne.map(one => {return one.iconWave})[0] ? "image-icon-wave " + deviceOne.map(one => {return one.iconWave})[0] : "image-icon-wave" }>
+            <figure className={deviceOne.icon.wave ? "image-icon-wave " + deviceOne.icon.wave : "image-icon-wave" }>
             </figure>
             <p className="text-bold-title">
-            {deviceOne.length === 0 ? [data[0].waveMeters] : deviceOne.map(one => {return one.waveMeters})}
+            {deviceOne.summary.meters}
             </p>
             <p className="text-bold">
-            {deviceOne.length === 0 ? [data[0].wave] : deviceOne.map(one => {return one.wave})}
+            {deviceOne.summary.resistance}
             </p>
           </div>
           <div className="compare-column compare-column-two">
-            <figure className={deviceTwo.map(two => {return two.iconWave})[0] ? "image-icon-wave " + deviceTwo.map(two => {return two.iconWave})[0] : "image-icon-wave" }>
+            <figure className={deviceTwo.icon.wave ? "image-icon-wave " + deviceTwo.icon.wave : "image-icon-wave" }>
             </figure>
             <p className="text-bold-title">
-            {deviceTwo.length === 0 ? [data[1].waveMeters] : deviceTwo.map(two => {return two.waveMeters})}
+            {deviceTwo.summary.meters}
             </p>
             <p className="text-bold">
-            {deviceTwo.length === 0 ? [data[1].wave] : deviceTwo.map(two => {return two.wave})}
+            {deviceTwo.summary.resistance}
             </p>
           </div>
           <div className="compare-column compare-column-three">
-            <figure className={deviceThree.map(three => {return three.iconWave})[0] ? "image-icon-wave " + deviceThree.map(three => {return three.iconWave})[0] : "image-icon-wave" }>
+            <figure className={deviceThree.icon.wave ? "image-icon-wave " + deviceThree.icon.wave : "image-icon-wave" }>
             </figure>
             <p className="text-bold-title">
-            {deviceThree.length === 0 ? [data[2].waveMeters] : deviceThree.map(three => {return three.waveMeters})}
+            {deviceThree.summary.meters}
             </p>
             <p className="text-bold">
-            {deviceThree.length === 0 ? [data[2].wave] : deviceThree.map(three => {return three.wave})}
+            {deviceThree.summary.resistance}
             </p>
           </div>
         </div>

@@ -11,15 +11,15 @@ const SectionChip: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, d
       />
 
       <SectionRows 
-        labelOne={deviceOne.length === 0 ? [data[0].chipset] : deviceOne.map(one => {return one.chipset})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].chipset] : deviceTwo.map(two => {return two.chipset})}
-        labelThree={deviceThree.length === 0 ? [data[2].chipset] : deviceThree.map(three => {return three.chipset})}      
+        labelOne={deviceOne.chip.chipset}
+        labelTwo={deviceTwo.chip.chipset}
+        labelThree={deviceThree.chip.chipset}      
       />
 
       <SectionRows 
-        labelOne={deviceOne.length === 0 ? [data[0].chipsetFeatures] : deviceOne.map(one => {return one.chipsetFeatures})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].chipsetFeatures] : deviceTwo.map(two => {return two.chipsetFeatures})}
-        labelThree={deviceThree.length === 0 ? [data[2].chipsetFeatures] : deviceThree.map(three => {return three.chipsetFeatures})}      
+        labelOne={deviceOne.chip.features}
+        labelTwo={deviceTwo.chip.features}
+        labelThree={deviceThree.chip.features}      
       />
 
     </div>

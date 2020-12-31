@@ -12,16 +12,95 @@ const SectionCartaoSim: React.FC<InformationDevicesProps> = ({ deviceOne, device
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].cardSIM] : deviceOne.map(one => { return one.cardSIM })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].cardSIM] : deviceTwo.map(two => { return two.cardSIM })}
-        labelThree={deviceThree.length === 0 ? [data[2].cardSIM] : deviceThree.map(three => { return three.cardSIM })}
+        labelOne={deviceOne.card_sim.features}
+        labelTwo={deviceTwo.card_sim.features}
+        labelThree={deviceThree.card_sim.features}
       />
 
-      <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].cardSIMFeatures] : deviceOne.map(one => { return one.cardSIMFeatures })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].cardSIMFeatures] : deviceTwo.map(two => { return two.cardSIMFeatures })}
-        labelThree={deviceThree.length === 0 ? [data[2].cardSIMFeatures] : deviceThree.map(three => { return three.cardSIMFeatures })}
-      />
+      {deviceOne.card_sim.features2 ? 
+        <SectionRows
+          labelOne={deviceOne.card_sim.features2}
+          labelTwo={deviceTwo.card_sim.features2}
+          labelThree={deviceThree.card_sim.features2}      
+        />
+        : deviceTwo.card_sim.features2 ?
+        <SectionRows
+          labelOne={deviceOne.card_sim.features2}
+          labelTwo={deviceTwo.card_sim.features2}
+          labelThree={deviceThree.card_sim.features2}      
+        />
+
+        : deviceThree.card_sim.features2 ?
+        <SectionRows
+          labelOne={deviceOne.card_sim.features2}
+          labelTwo={deviceTwo.card_sim.features2}
+          labelThree={deviceThree.card_sim.features2}      
+        />
+      : '' }
+
+      {deviceOne.card_sim.features3 ? 
+        <SectionRows
+          labelOne={deviceOne.card_sim.features3}
+          labelTwo={deviceTwo.card_sim.features3}
+          labelThree={deviceThree.card_sim.features3}      
+        />
+        : deviceTwo.card_sim.features3 ?
+        <SectionRows
+          labelOne={deviceOne.card_sim.features3}
+          labelTwo={deviceTwo.card_sim.features3}
+          labelThree={deviceThree.card_sim.features3}      
+        />
+
+        : deviceThree.card_sim.features3 ?
+        <SectionRows
+          labelOne={deviceOne.card_sim.features3}
+          labelTwo={deviceTwo.card_sim.features3}
+          labelThree={deviceThree.card_sim.features3}      
+        />
+      : '' }
+
+      {deviceOne.card_sim.features4 ? 
+        <SectionRows
+          labelOne={deviceOne.card_sim.features4}
+          labelTwo={deviceTwo.card_sim.features4}
+          labelThree={deviceThree.card_sim.features4}      
+        />
+        : deviceTwo.card_sim.features4 ?
+        <SectionRows
+          labelOne={deviceOne.card_sim.features4}
+          labelTwo={deviceTwo.card_sim.features4}
+          labelThree={deviceThree.card_sim.features4}      
+        />
+
+        : deviceThree.card_sim.features4 ?
+        <SectionRows
+          labelOne={deviceOne.card_sim.features4}
+          labelTwo={deviceTwo.card_sim.features4}
+          labelThree={deviceThree.card_sim.features4}      
+        />
+      : '' }
+
+      {deviceOne.card_sim.features5 ? 
+        <SectionRows
+          labelOne={deviceOne.card_sim.features5}
+          labelTwo={deviceTwo.card_sim.features5}
+          labelThree={deviceThree.card_sim.features5}      
+        />
+        : deviceTwo.card_sim.features5 ?
+        <SectionRows
+          labelOne={deviceOne.card_sim.features5}
+          labelTwo={deviceTwo.card_sim.features5}
+          labelThree={deviceThree.card_sim.features5}      
+        />
+
+        : deviceThree.card_sim.features5 ?
+        <SectionRows
+          labelOne={deviceOne.card_sim.features5}
+          labelTwo={deviceTwo.card_sim.features5}
+          labelThree={deviceThree.card_sim.features5}      
+        />
+      : '' }
+
       
     </div>
   )

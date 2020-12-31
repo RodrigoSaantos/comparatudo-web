@@ -14,19 +14,26 @@ import { GetStaticProps } from 'next'
 function SearchPage({allDevices}) {
   const router = useRouter();   
   
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState(router.query.search);
+  const [loading, setLoading] = useState(true);
 
 
   const [listPhones, setListPhones] = useState([])
 
-  async function searchphones() {
-
-    const response = await api.get('search?search='+ router.query.search);
-    setListPhones(response.data)
-    setSearch(router.query.search as string)
-  }
-
-  useEffect(() => { searchphones()  }, [router])
+  useEffect(() => {
+    try {
+      api.get('smartphones/search?search=' + router.query.search).then(response => {
+        setListPhones(response.data)
+        setSearch(router.query.search as string)
+        setLoading(false);
+      })
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(true)
+    }
+    
+  }, [router])
 
   const [createElement, setCreateElement] = useState(false)
 
@@ -86,21 +93,28 @@ function SearchPage({allDevices}) {
         
 
         <Line>
-          
-            {listPhones.length === 0 ? <span><strong>Nenhum</strong> Resultado encontrado</span>   : listPhones.length > 1 ? <span><strong>{listPhones.length}</strong>  Resultados encontrados </span> : <span><strong>{listPhones.length}</strong> Resultado encontrado  </span>             }
+            {loading 
+            
+            ? <span>carregando...</span> 
+            
+            : listPhones.length === 0 ? <span><strong>Nenhum</strong> Resultado encontrado</span>   : listPhones.length > 1 ? <span><strong>{listPhones.length}</strong>  Resultados encontrados </span> : <span><strong>{listPhones.length}</strong> Resultado encontrado  </span>}
 
-          
         </Line>
 
       </PageHeader>
 
       <Main>
 
-          {listPhones.length === 0 ? 
+        {
+          loading
+          ? <span style={{ justifyContent: 'center', display: 'flex', height: '400px'}}>carregando...</span>
+
+          : listPhones.length === 0 ? 
           
           <div style={{height: '300px', textAlign: 'center', fontSize: '1.7rem', fontWeight: 'bolder', width: '90%', margin: 'auto'}}>Busque outro termo para ver mais resultados</div> : 
           
-          <Div>{listPhones.map((listPhone: DataProps) => { return <Cards key={listPhone.modelo} phones={listPhone} />})}</Div> }
+          <Div>{listPhones.map((listPhone: DataProps) => { return <Cards key={listPhone.modelo} phones={listPhone} />})}</Div>
+        }
 
       </Main>
 
@@ -116,7 +130,7 @@ export default SearchPage
 
 export const getStaticProps:GetStaticProps = async () => {
 
-  const response = await api.get(`search?search=`)
+  const response = await api.get(`smartphones/search?search=`)
 
   const data = await response.data
 

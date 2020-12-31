@@ -8,43 +8,49 @@ interface DatasheetRowProps {
   figureUrl?: string;
   line1Strong?: string;
   line1String?: string;
-  line1?: Array<string>;
+  line1?: string;
   line2Strong?: string;
   line2String?: string;
-  line2?: Array<string>;
+  line2?: string;
   line3String?: string;
   line3Strong?: string;
-  line3?: Array<string>;
+  line3?: string;
   line4String?: string;
   line4Strong?: string;
-  line4?: Array<string>;
+  line4?: string;
   line5String?: string;
   line5Strong?: string;
-  line5?: Array<string>
+  line5?: string
   line6String?: string;
   line6Strong?: string;
-  line6?: Array<string>;
+  line6?: string;
   line7String?: string;
   line7Strong?: string;
-  line7?: Array<string>;
+  line7?: string;
   line8String?: string;
   line8Strong?: string;
-  line8?: Array<string>;
+  line8?: string;
   line9String?: string;
   line9Strong?: string;
-  line9?: Array<string>;
+  line9?: string;
   line10String?: string;
   line10Strong?: string;
-  line10?: Array<string>;
+  line10?: string;
   line11String?: string;
   line11Strong?: string;
-  line11?: Array<string>;
+  line11?: string;
   line12String?: string;
   line12Strong?: string;
-  line12?: Array<string>;
+  line12?: string;
   line13String?: string;
   line13Strong?: string;
-  line13?: Array<string>;
+  line13?: string;
+  line14String?: string;
+  line14Strong?: string;
+  line14?: string;
+  line15String?: string;
+  line15Strong?: string;
+  line15?: string;
 }
 
 const DatasheetRow: React.FC<DatasheetRowProps> = (props) => {
@@ -122,6 +128,16 @@ const DatasheetRow: React.FC<DatasheetRowProps> = (props) => {
             {props.line13Strong && <strong>{props.line13Strong}</strong> } 
             {props.line13String && props.line13String } 
             {props.line13 && props.line13 } 
+          </li>
+          <li>
+            {props.line14Strong && <strong>{props.line14Strong}</strong> } 
+            {props.line14String && props.line14String } 
+            {props.line14 && props.line14 } 
+          </li>
+          <li>
+            {props.line15Strong && <strong>{props.line15Strong}</strong> } 
+            {props.line15String && props.line15String } 
+            {props.line15 && props.line15 } 
           </li>
         </ul>
       </div>

@@ -11,9 +11,9 @@ const SectionResistance: React.FC<InformationDevicesProps> = ({deviceOne, device
       />
 
       <SectionRows
-      labelOne={deviceOne.length === 0 ? [data[0].resistance] : deviceOne.map(one => {return one.resistance})}
-      labelTwo={deviceTwo.length === 0 ? [data[1].resistance] : deviceTwo.map(two => {return two.resistance})}
-      labelThree={deviceThree.length === 0 ? [data[2].resistance] : deviceThree.map(three => {return three.resistance})}      
+      labelOne={deviceOne.resistance.wave}
+      labelTwo={deviceTwo.resistance.wave}
+      labelThree={deviceThree.resistance.wave}      
       />
 
     </div>

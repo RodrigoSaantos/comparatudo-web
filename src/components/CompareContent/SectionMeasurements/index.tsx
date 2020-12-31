@@ -13,38 +13,38 @@ const SectionMeasurements: React.FC<InformationDevicesProps> = ({ deviceOne, dev
 
       <SectionRows 
         labelStrongOne="Altura"
-        labelOne={deviceOne.length === 0 ? [data[0].height] : deviceOne.map(one => {return one.height})}
+        labelOne={deviceOne.measurements.height}
         labelStrongTwo="Altura"
-        labelTwo={deviceTwo.length === 0 ? [data[1].height] : deviceTwo.map(two => {return two.height})}
+        labelTwo={deviceTwo.measurements.height}
         labelStrongThree="Altura"
-        labelThree={deviceThree.length === 0 ? [data[2].height] : deviceThree.map(three => {return three.height})}      
+        labelThree={deviceThree.measurements.height}
       />
 
       <SectionRows 
         labelStrongOne="Largura"
-        labelOne={deviceOne.length === 0 ? [data[0].width] : deviceOne.map(one => {return one.width})}
+        labelOne={deviceOne.measurements.width}
         labelStrongTwo="Largura"
-        labelTwo={deviceTwo.length === 0 ? [data[1].width] : deviceTwo.map(two => {return two.width})}
+        labelTwo={deviceTwo.measurements.width}
         labelStrongThree="Largura"
-        labelThree={deviceThree.length === 0 ? [data[2].width] : deviceThree.map(three => {return three.width})}      
+        labelThree={deviceThree.measurements.width}
       />
       
       <SectionRows 
         labelStrongOne="Espessura"
-        labelOne={deviceOne.length === 0 ? [data[0].espessura] : deviceOne.map(one => {return one.espessura})}
+        labelOne={deviceOne.measurements.espessura}
         labelStrongTwo="Espessura"
-        labelTwo={deviceTwo.length === 0 ? [data[1].espessura] : deviceTwo.map(two => {return two.espessura})}
+        labelTwo={deviceTwo.measurements.espessura}
         labelStrongThree="Espessura"
-        labelThree={deviceThree.length === 0 ? [data[2].espessura] : deviceThree.map(three => {return three.espessura})}      
+        labelThree={deviceThree.measurements.espessura}
       />
 
       <SectionRows 
         labelStrongOne="Peso"
-        labelOne={deviceOne.length === 0 ? [data[0].peso] : deviceOne.map(one => {return one.peso})}
+        labelOne={deviceOne.measurements.peso}
         labelStrongTwo="Peso"
-        labelTwo={deviceTwo.length === 0 ? [data[1].peso] : deviceTwo.map(two => {return two.peso})}
+        labelTwo={deviceTwo.measurements.peso}
         labelStrongThree="Peso"
-        labelThree={deviceThree.length === 0 ? [data[2].peso] : deviceThree.map(three => {return three.peso})}      
+        labelThree={deviceThree.measurements.peso}
       />
 
     </div>

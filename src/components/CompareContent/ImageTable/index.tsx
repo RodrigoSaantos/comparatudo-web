@@ -6,6 +6,7 @@ import amazonPhonesPrice from '../../../services/amazonPhonesPrice.json'
 import magaluPhonesPrice from '../../../services/magaluPhonesPrice.json'
 import submarinoPhonesPrice from '../../../services/submarinoPhonesPrice.json'
 import { Container, Figure } from './style';
+import ButtonPrice from '../../ButtonPrice';
 
 const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, deviceThree}) => {
 
@@ -109,207 +110,197 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
   }
 
   return (
-    <Container>
 
-      <div className="image-column image-column-one">
-        <Figure backgroundImage={'url(/assets/images/smartphones/compare/' + deviceOne.map(one => {return one.page})[0] + '-bg.png)' }>
-        <figure className={deviceOne.map(one => {return one.modelo})[0] ? "gallery-image " + deviceOne.map(one => {return one.modelo})[0] : "gallery-image" }>
-        </figure>
-        </Figure>
-
-        <div className="row-price">
-          <div className="price-nav">
-            <ul className="price-nav-items">
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceAmazon}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-amazon " + classButtonAmazon} >Amazon</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceMagalu}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-magalu " + classButtonMagalu} >MagaLu</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceSubmarino}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-submarino " + classButtonSubmarino}>Submarino</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceExtra}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-extra " + classButtonExtra}>Extra</div>
-                  </figure>
-                </button>
-              </li>
-
-            </ul>
-            <div className={"price-value price-value-amazon " + classButtonAmazon}>
-              <h1>{amazonPhonesPrice[deviceOne.map(one => {return one.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceOne.map(one => {return one.linkAffiliate1})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-magalu " + classButtonMagalu}>
-              <h1>{magaluPhonesPrice[deviceOne.map(one => {return one.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceOne.map(one => {return one.linkAffiliate2})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-submarino " + classButtonSubmarino}>
-              <h1>{submarinoPhonesPrice[deviceOne.map(one => {return one.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceOne.map(one => {return one.linkAffiliate3})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-extra " + classButtonExtra}>
-              <h1>{americanasPhonesPrice[deviceOne.map(one => {return one.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceOne.map(one => {return one.linkAffiliate4})[0]}>Acessar a Loja</a>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div className="image-column image-column-two">
-        <Figure backgroundImage={'url(/assets/images/smartphones/compare/' + deviceTwo.map(one => {return one.page})[0] + '-bg.png)' }>
-        <figure className={deviceTwo.map(two => {return two.modelo})[0] ? "gallery-image " + deviceTwo.map(two => {return two.modelo})[0] : "gallery-image" }>
-        </figure>
-        </Figure>
-
-        <div className="row-price">
-          <div className="price-nav">
-            <ul className="price-nav-items">
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceAmazonTwo}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-amazon " + classButtonAmazonTwo} >Amazon</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceMagaluTwo}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-magalu " + classButtonMagaluTwo} >MagaLu</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceSubmarinoTwo}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-submarino " + classButtonSubmarinoTwo} >Submarino</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceExtraTwo}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-extra " + classButtonExtraTwo}>Extra</div>
-                  </figure>
-                </button>
-              </li>
-
-
-
-            </ul>
-            <div className={"price-value price-value-amazon " + classButtonAmazonTwo}>
-              <h1>{amazonPhonesPrice[deviceTwo.map(two => {return two.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceTwo.map(two => {return two.linkAffiliate1})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-magalu " + classButtonMagaluTwo}>
-              <h1>{magaluPhonesPrice[deviceTwo.map(two => {return two.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceTwo.map(two => {return two.linkAffiliate2})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-submarino " + classButtonSubmarinoTwo}>
-              <h1>{submarinoPhonesPrice[deviceTwo.map(two => {return two.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceTwo.map(two => {return two.linkAffiliate3})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-extra " + classButtonExtraTwo}>
-              <h1>{americanasPhonesPrice[deviceTwo.map(two => {return two.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceTwo.map(two => {return two.linkAffiliate4})[0]}>Acessar a Loja</a>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div className="image-column image-column-three">
-        <Figure backgroundImage={'url(/assets/images/smartphones/compare/' + deviceThree.map(one => {return one.page})[0] + '-bg.png)' }>
-        <figure className={deviceThree.map(three => {return three.modelo})[0] ? "gallery-image " + deviceThree.map(three => {return three.modelo})[0] : "gallery-image" }>
-        </figure>
-        </Figure>
-
-        <div className="row-price">
-          <div className="price-nav">
-            <ul className="price-nav-items">
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceAmazonThree}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-amazon " + classButtonAmazonThree} >Amazon</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceMagaluThree}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-magalu " + classButtonMagaluThree} >MagaLu</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceSubmarinoThree}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-submarino " + classButtonSubmarinoThree} >Submarino</div>
-                  </figure>
-                </button>
-              </li>
-              <li className="price-nav-item">
-                <button className="price-nav-button" onClick={showPriceExtraThree}>
-                  <figure>
-                    <div className={"price-nav-text buttonname-extra " + classButtonExtraThree}>Extra</div>
-                  </figure>
-                </button>
-              </li>
-
-
-
-            </ul>
-            <div className={"price-value price-value-amazon " + classButtonAmazonThree}>
-              <h1>{amazonPhonesPrice[deviceThree.map(three => {return three.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceThree.map(three => {return three.linkAffiliate1})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-magalu " + classButtonMagaluThree}>
-              <h1>{magaluPhonesPrice[deviceThree.map(three => {return three.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceThree.map(three => {return three.linkAffiliate2})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-submarino " + classButtonSubmarinoThree}>
-              <h1>{submarinoPhonesPrice[deviceThree.map(three => {return three.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceThree.map(three => {return three.linkAffiliate3})[0]}>Acessar a Loja</a>
-            </div>
-
-            <div className={"price-value price-value-extra " + classButtonExtraThree}>
-              <h1>{americanasPhonesPrice[deviceThree.map(three => {return three.id -1})[0]]}</h1>
-              <a target="_blank" href={deviceThree.map(three => {return three.linkAffiliate4})[0]}>Acessar a Loja</a>
-            </div>
-
-          </div>
-        </div>
-
-
-      </div>
-
-    </Container>
-
+       <Container>
+       <div className="image-column image-column-one">
+         <Figure backgroundImage={'url(/assets/images/smartphones/compare/' + deviceOne.page + '-bg.png)' }>
+         <figure className={deviceOne.modelo ? "gallery-image " + deviceOne.modelo : "gallery-image" }>
+         </figure>
+         </Figure>
+ 
+         <div className="row-price">
+           <div className="price-nav">
+             <ul className="price-nav-items">
+               <li className="price-nav-item">
+                 <ButtonPrice
+                  name="AMAZON"
+                  backgroundColor="#ff9000"
+                  onClick={showPriceAmazon}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="MAGALU" 
+                  backgroundColor="#f9d045" 
+                  onClick={showPriceMagalu}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="SUBMARINO" 
+                  backgroundColor="#00972d" 
+                  onClick={showPriceSubmarino}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="EXTRA" 
+                  backgroundColor="#ff0000" 
+                  onClick={showPriceExtra}
+                 />
+               </li>
+ 
+             </ul>
+             <div className={"price-value price-value-amazon " + classButtonAmazon}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceOne.affiliate.link1}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-magalu " + classButtonMagalu}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceOne.affiliate.link2}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-submarino " + classButtonSubmarino}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceOne.affiliate.link3}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-extra " + classButtonExtra}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceOne.affiliate.link4}>Acessar a Loja</a>
+             </div>
+ 
+           </div>
+         </div>
+ 
+       </div>
+ 
+       <div className="image-column image-column-two">
+         <Figure backgroundImage={'url(/assets/images/smartphones/compare/' + deviceTwo.page + '-bg.png)' }>
+         <figure className={deviceTwo.modelo ? "gallery-image " + deviceTwo.modelo : "gallery-image" }>
+         </figure>
+         </Figure>
+ 
+         <div className="row-price">
+           <div className="price-nav">
+             <ul className="price-nav-items">
+             <li className="price-nav-item">
+                 <ButtonPrice
+                  name="AMAZON"
+                  backgroundColor="#ff9000"
+                  onClick={showPriceAmazonTwo}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="MAGALU" 
+                  backgroundColor="#f9d045" 
+                  onClick={showPriceMagaluTwo}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="SUBMARINO" 
+                  backgroundColor="#00972d" 
+                  onClick={showPriceSubmarinoTwo}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="EXTRA" 
+                  backgroundColor="#ff0000" 
+                  onClick={showPriceExtraTwo}
+                 />
+               </li>
+             </ul>
+             <div className={"price-value price-value-amazon " + classButtonAmazonTwo}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceTwo.affiliate.link1}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-magalu " + classButtonMagaluTwo}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceTwo.affiliate.link2}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-submarino " + classButtonSubmarinoTwo}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceTwo.affiliate.link3}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-extra " + classButtonExtraTwo}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceTwo.affiliate.link4}>Acessar a Loja</a>
+             </div>
+ 
+           </div>
+         </div>
+ 
+       </div>
+ 
+       <div className="image-column image-column-three">
+         <Figure backgroundImage={'url(/assets/images/smartphones/compare/' + deviceThree.page + '-bg.png)' }>
+         <figure className={deviceThree.modelo ? "gallery-image " + deviceThree.modelo : "gallery-image" }>
+         </figure>
+         </Figure>
+ 
+         <div className="row-price">
+           <div className="price-nav">
+             <ul className="price-nav-items">
+             <li className="price-nav-item">
+                 <ButtonPrice
+                  name="AMAZON"
+                  backgroundColor="#ff9000"
+                  onClick={showPriceAmazonThree}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="MAGALU" 
+                  backgroundColor="#f9d045" 
+                  onClick={showPriceMagaluThree}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="SUBMARINO" 
+                  backgroundColor="#00972d" 
+                  onClick={showPriceSubmarinoThree}
+                 />
+               </li>
+               <li className="price-nav-item">
+                 <ButtonPrice 
+                  name="EXTRA" 
+                  backgroundColor="#ff0000" 
+                  onClick={showPriceExtraThree}
+                 />
+               </li>
+             </ul>
+             <div className={"price-value price-value-amazon " + classButtonAmazonThree}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceThree.affiliate.link1}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-magalu " + classButtonMagaluThree}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceThree.affiliate.link2}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-submarino " + classButtonSubmarinoThree}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceThree.affiliate.link3}>Acessar a Loja</a>
+             </div>
+ 
+             <div className={"price-value price-value-extra " + classButtonExtraThree}>
+               <h1>Sem preço no momento</h1>
+               <a target="_blank" href={deviceThree.affiliate.link4}>Acessar a Loja</a>
+             </div>
+ 
+           </div>
+         </div>
+       </div>
+     </Container>
 
   )
 }

@@ -4,11 +4,11 @@ import { Container } from './style'
 
 interface sectionRowsProps {
   labelStrongOne?: string;
-  labelOne: Array<string>;
+  labelOne: string;
   labelStrongTwo?: string;
-  labelTwo: Array<string>;
+  labelTwo: string;
   labelStrongThree?: string;
-  labelThree: Array<string>;
+  labelThree: string;
 }
 
 const SectionRows: React.FC<sectionRowsProps> = (props) => {

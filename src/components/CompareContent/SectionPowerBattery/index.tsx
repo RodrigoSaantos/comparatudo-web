@@ -13,150 +13,193 @@ const SectionPowerBattery: React.FC<InformationDevicesProps> = ({ deviceOne, dev
 
       <SectionRows
         labelStrongOne="Reprodução de vídeo"
-        labelOne={deviceOne.length === 0 ? [data[0].batteryReproductionVideo] : deviceOne.map(one => { return one.batteryReproductionVideo })}
+        labelOne={deviceOne.battery.reproductionVideo}
         labelStrongTwo="Reprodução de vídeo"
-        labelTwo={deviceTwo.length === 0 ? [data[1].batteryReproductionVideo] : deviceTwo.map(two => { return two.batteryReproductionVideo })}
+        labelTwo={deviceTwo.battery.reproductionVideo}
         labelStrongThree="Reprodução de vídeo"
-        labelThree={deviceThree.length === 0 ? [data[2].batteryReproductionVideo] : deviceThree.map(three => { return three.batteryReproductionVideo })}
+        labelThree={deviceThree.battery.reproductionVideo}
       />
 
-      {deviceOne.map(one => {return one.batteryReproductionVideo2.length}) >= [1] ? 
+      {deviceOne.battery.reproductionVideo2 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryReproductionVideo2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryReproductionVideo2})}
-        labelThree={deviceThree.map(three => {return three.batteryReproductionVideo2})}      
+        labelOne={deviceOne.battery.reproductionVideo2}
+        labelTwo={deviceTwo.battery.reproductionVideo2}
+        labelThree={deviceThree.battery.reproductionVideo2}      
       />
-      : deviceTwo.map(two => {return two.batteryReproductionVideo2.length}) >= [1] ?
+      : deviceTwo.battery.reproductionVideo2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryReproductionVideo2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryReproductionVideo2})}
-        labelThree={deviceThree.map(three => {return three.batteryReproductionVideo2})}      
+        labelOne={deviceOne.battery.reproductionVideo2}
+        labelTwo={deviceTwo.battery.reproductionVideo2}
+        labelThree={deviceThree.battery.reproductionVideo2}      
       />
 
-      : deviceThree.map(three => {return three.batteryReproductionVideo2.length}) >= [1] ?
+      : deviceThree.battery.reproductionVideo2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryReproductionVideo2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryReproductionVideo2})}
-        labelThree={deviceThree.map(three => {return three.batteryReproductionVideo2})}      
+        labelOne={deviceOne.battery.reproductionVideo2}
+        labelTwo={deviceTwo.battery.reproductionVideo2}
+        labelThree={deviceThree.battery.reproductionVideo2}      
       />
       : '' }
 
       <SectionRows
         labelStrongOne="Reprodução de áudio"
-        labelOne={deviceOne.length === 0 ? [data[0].batteryReproductionAudio] : deviceOne.map(one => { return one.batteryReproductionAudio })}
+        labelOne={deviceOne.battery.reproductionAudio}
         labelStrongTwo="Reprodução de áudio"
-        labelTwo={deviceTwo.length === 0 ? [data[1].batteryReproductionAudio] : deviceTwo.map(two => { return two.batteryReproductionAudio })}
+        labelTwo={deviceTwo.battery.reproductionAudio}
         labelStrongThree="Reprodução de áudio"
-        labelThree={deviceThree.length === 0 ? [data[2].batteryReproductionAudio] : deviceThree.map(three => { return three.batteryReproductionAudio })}
+        labelThree={deviceThree.battery.reproductionAudio}
       />
 
       <SectionRows
         labelStrongOne="Carregamento rápido"
-        labelOne={deviceOne.length === 0 ? [data[0].batteryChargingFast] : deviceOne.map(one => { return one.batteryChargingFast })}
+        labelOne={deviceOne.battery.chargingFast}
         labelStrongTwo="Carregamento rápido"
-        labelTwo={deviceTwo.length === 0 ? [data[1].batteryChargingFast] : deviceTwo.map(two => { return two.batteryChargingFast })}
+        labelTwo={deviceTwo.battery.chargingFast}
         labelStrongThree="Carregamento rápido"
-        labelThree={deviceThree.length === 0 ? [data[2].batteryChargingFast] : deviceThree.map(three => { return three.batteryChargingFast })}
+        labelThree={deviceThree.battery.chargingFast}
       />
 
       <SectionRows
         labelStrongOne="Capacidade de Bateria"
-        labelOne={deviceOne.length === 0 ? [data[0].batteryCapacity] : deviceOne.map(one => { return one.batteryCapacity })}
+        labelOne={deviceOne.battery.capacity}
         labelStrongTwo="Capacidade de Bateria"
-        labelTwo={deviceTwo.length === 0 ? [data[1].batteryCapacity] : deviceTwo.map(two => { return two.batteryCapacity })}
+        labelTwo={deviceTwo.battery.capacity}
         labelStrongThree="Capacidade de Bateria"
-        labelThree={deviceThree.length === 0 ? [data[2].batteryCapacity] : deviceThree.map(three => { return three.batteryCapacity })}
+        labelThree={deviceThree.battery.capacity}
       />
 
-      {deviceOne.map(one => {return one.batteryCapacity2.length}) >= [1] ? 
+      {deviceOne.battery.capacity2 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryCapacity2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryCapacity2})}
-        labelThree={deviceThree.map(three => {return three.batteryCapacity2})}      
+        labelOne={deviceOne.battery.capacity2}
+        labelTwo={deviceTwo.battery.capacity2}
+        labelThree={deviceThree.battery.capacity2}      
       />
-      : deviceTwo.map(two => {return two.batteryCapacity2.length}) >= [1] ?
+      : deviceTwo.battery.capacity2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryCapacity2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryCapacity2})}
-        labelThree={deviceThree.map(three => {return three.batteryCapacity2})}      
+        labelOne={deviceOne.battery.capacity2}
+        labelTwo={deviceTwo.battery.capacity2}
+        labelThree={deviceThree.battery.capacity2}      
       />
 
-      : deviceThree.map(three => {return three.batteryCapacity2.length}) >= [1] ?
+      : deviceThree.battery.capacity2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryCapacity2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryCapacity2})}
-        labelThree={deviceThree.map(three => {return three.batteryCapacity2})}      
+        labelOne={deviceOne.battery.capacity2}
+        labelTwo={deviceTwo.battery.capacity2}
+        labelThree={deviceThree.battery.capacity2}      
       />
       : '' }
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].batteryCharge] : deviceOne.map(one => { return one.batteryCharge })}
-        labelTwo={deviceTwo.length === 0 ? [data[1].batteryCharge] : deviceTwo.map(two => { return two.batteryCharge })}
-        labelThree={deviceThree.length === 0 ? [data[2].batteryCharge] : deviceThree.map(three => { return three.batteryCharge })}
+        labelOne={deviceOne.battery.charge}
+        labelTwo={deviceTwo.battery.charge}
+        labelThree={deviceThree.battery.charge}
       />
 
-      {deviceOne.map(one => {return one.batteryFeatures.length}) >= [1] ? 
+      {deviceOne.battery.features ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures})}      
+        labelOne={deviceOne.battery.features}
+        labelTwo={deviceTwo.battery.features}
+        labelThree={deviceThree.battery.features}      
       />
-      : deviceTwo.map(two => {return two.batteryFeatures.length}) >= [1] ?
+      : deviceTwo.battery.features ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures})}      
+        labelOne={deviceOne.battery.features}
+        labelTwo={deviceTwo.battery.features}
+        labelThree={deviceThree.battery.features}      
       />
 
-      : deviceThree.map(three => {return three.batteryFeatures.length}) >= [1] ?
+      : deviceThree.battery.features ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures})}      
+        labelOne={deviceOne.battery.features}
+        labelTwo={deviceTwo.battery.features}
+        labelThree={deviceThree.battery.features}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.batteryFeatures2.length}) >= [1] ? 
+      {deviceOne.battery.features2 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures2})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures2})}      
+        labelOne={deviceOne.battery.features2}
+        labelTwo={deviceTwo.battery.features2}
+        labelThree={deviceThree.battery.features2}      
       />
-      : deviceTwo.map(two => {return two.batteryFeatures2.length}) >= [1] ?
+      : deviceTwo.battery.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures2})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures2})}      
+        labelOne={deviceOne.battery.features2}
+        labelTwo={deviceTwo.battery.features2}
+        labelThree={deviceThree.battery.features2}      
       />
 
-      : deviceThree.map(three => {return three.batteryFeatures2.length}) >= [1] ?
+      : deviceThree.battery.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures2})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures2})}      
+        labelOne={deviceOne.battery.features2}
+        labelTwo={deviceTwo.battery.features2}
+        labelThree={deviceThree.battery.features2}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.batteryFeatures3.length}) >= [1] ? 
+      {deviceOne.battery.features3 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures3})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures3})}      
+        labelOne={deviceOne.battery.features3}
+        labelTwo={deviceTwo.battery.features3}
+        labelThree={deviceThree.battery.features3}      
       />
-      : deviceTwo.map(two => {return two.batteryFeatures3.length}) >= [1] ?
+      : deviceTwo.battery.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures3})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures3})}      
+        labelOne={deviceOne.battery.features3}
+        labelTwo={deviceTwo.battery.features3}
+        labelThree={deviceThree.battery.features3}      
       />
 
-      : deviceThree.map(three => {return three.batteryFeatures3.length}) >= [1] ?
+      : deviceThree.battery.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.batteryFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.batteryFeatures3})}
-        labelThree={deviceThree.map(three => {return three.batteryFeatures3})}      
+        labelOne={deviceOne.battery.features3}
+        labelTwo={deviceTwo.battery.features3}
+        labelThree={deviceThree.battery.features3}      
       />
       : '' }
+
+      {deviceOne.battery.features4 ? 
+      <SectionRows
+        labelOne={deviceOne.battery.features4}
+        labelTwo={deviceTwo.battery.features4}
+        labelThree={deviceThree.battery.features4}      
+      />
+      : deviceTwo.battery.features4 ?
+      <SectionRows
+        labelOne={deviceOne.battery.features4}
+        labelTwo={deviceTwo.battery.features4}
+        labelThree={deviceThree.battery.features4}      
+      />
+
+      : deviceThree.battery.features4 ?
+      <SectionRows
+        labelOne={deviceOne.battery.features4}
+        labelTwo={deviceTwo.battery.features4}
+        labelThree={deviceThree.battery.features4}      
+      />
+      : '' }
+
+      {deviceOne.battery.features5 ? 
+      <SectionRows
+        labelOne={deviceOne.battery.features5}
+        labelTwo={deviceTwo.battery.features5}
+        labelThree={deviceThree.battery.features5}      
+      />
+      : deviceTwo.battery.features5 ?
+      <SectionRows
+        labelOne={deviceOne.battery.features5}
+        labelTwo={deviceTwo.battery.features5}
+        labelThree={deviceThree.battery.features5}      
+      />
+
+      : deviceThree.battery.features5 ?
+      <SectionRows
+        labelOne={deviceOne.battery.features5}
+        labelTwo={deviceTwo.battery.features5}
+        labelThree={deviceThree.battery.features5}      
+      />
+      : '' }
+
 
 
     </div>

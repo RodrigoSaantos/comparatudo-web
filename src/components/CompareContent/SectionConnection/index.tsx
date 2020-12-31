@@ -10,126 +10,124 @@ const SectionConnection: React.FC<InformationDevicesProps> = ({ deviceOne, devic
         title={title}
       />
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].dataTransmition] : deviceOne.map(one => {return one.dataTransmition})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].dataTransmition] : deviceTwo.map(two => {return two.dataTransmition})}
-        labelThree={deviceThree.length === 0 ? [data[2].dataTransmition] : deviceThree.map(three => {return three.dataTransmition})}      
+        labelOne={deviceOne.connection.dataTransmition}
+        labelTwo={deviceTwo.connection.dataTransmition}
+        labelThree={deviceThree.connection.dataTransmition}      
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].wifi] : deviceOne.map(one => {return one.wifi})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].wifi] : deviceTwo.map(two => {return two.wifi})}
-        labelThree={deviceThree.length === 0 ? [data[2].wifi] : deviceThree.map(three => {return three.wifi})}      
+        labelOne={deviceOne.connection.wifi}
+        labelTwo={deviceTwo.connection.wifi}
+        labelThree={deviceThree.connection.wifi}      
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].bluetooth] : deviceOne.map(one => {return one.bluetooth})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].bluetooth] : deviceTwo.map(two => {return two.bluetooth})}
-        labelThree={deviceThree.length === 0 ? [data[2].bluetooth] : deviceThree.map(three => {return three.bluetooth})}      
+        labelOne={deviceOne.connection.bluetooth}
+        labelTwo={deviceTwo.connection.bluetooth}
+        labelThree={deviceThree.connection.bluetooth}      
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].gps] : deviceOne.map(one => {return one.gps})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].gps] : deviceTwo.map(two => {return two.gps})}
-        labelThree={deviceThree.length === 0 ? [data[2].gps] : deviceThree.map(three => {return three.gps})}      
+        labelOne={deviceOne.connection.gps}
+        labelTwo={deviceTwo.connection.gps}
+        labelThree={deviceThree.connection.gps}      
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].nfc] : deviceOne.map(one => {return one.nfc})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].nfc] : deviceTwo.map(two => {return two.nfc})}
-        labelThree={deviceThree.length === 0 ? [data[2].nfc] : deviceThree.map(three => {return three.nfc})}      
+        labelOne={deviceOne.connection.nfc}
+        labelTwo={deviceTwo.connection.nfc}
+        labelThree={deviceThree.connection.nfc}      
       />
 
       <SectionRows
-        labelOne={deviceOne.length === 0 ? [data[0].conectionFeatures] : deviceOne.map(one => {return one.conectionFeatures})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].conectionFeatures] : deviceTwo.map(two => {return two.conectionFeatures})}
-        labelThree={deviceThree.length === 0 ? [data[2].conectionFeatures] : deviceThree.map(three => {return three.conectionFeatures})}      
+        labelOne={deviceOne.connection.features}
+        labelTwo={deviceTwo.connection.features}
+        labelThree={deviceThree.connection.features}      
       />
 
-      {deviceOne.map(one => {return one.conectionFeatures2.length}) >= [1] ? 
+      {deviceOne.connection.features2 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures2})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures2})}      
+        labelOne={deviceOne.connection.features2}
+        labelTwo={deviceTwo.connection.features2}
+        labelThree={deviceThree.connection.features2}      
       />
-      : deviceTwo.map(two => {return two.conectionFeatures2.length}) >= [1] ?
+      : deviceTwo.connection.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures2})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures2})}      
+        labelOne={deviceOne.connection.features2}
+        labelTwo={deviceTwo.connection.features2}
+        labelThree={deviceThree.connection.features2}      
       />
 
-      : deviceThree.map(three => {return three.conectionFeatures2.length}) >= [1] ?
+      : deviceThree.connection.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures2})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures2})}      
+        labelOne={deviceOne.connection.features2}
+        labelTwo={deviceTwo.connection.features2}
+        labelThree={deviceThree.connection.features2}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.conectionFeatures3.length}) >= [1] ? 
+      {deviceOne.connection.features3 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures3})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures3})}      
+        labelOne={deviceOne.connection.features3}
+        labelTwo={deviceTwo.connection.features3}
+        labelThree={deviceThree.connection.features3}      
       />
-      : deviceTwo.map(two => {return two.conectionFeatures3.length}) >= [1] ?
+      : deviceTwo.connection.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures3})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures3})}      
+        labelOne={deviceOne.connection.features3}
+        labelTwo={deviceTwo.connection.features3}
+        labelThree={deviceThree.connection.features3}      
       />
 
-      : deviceThree.map(three => {return three.conectionFeatures3.length}) >= [1] ?
+      : deviceThree.connection.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures3})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures3})}      
+        labelOne={deviceOne.connection.features3}
+        labelTwo={deviceTwo.connection.features3}
+        labelThree={deviceThree.connection.features3}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.conectionFeatures4.length}) >= [1] ? 
+      {deviceOne.connection.features4 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures4})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures4})}      
+        labelOne={deviceOne.connection.features4}
+        labelTwo={deviceTwo.connection.features4}
+        labelThree={deviceThree.connection.features4}      
       />
-      : deviceTwo.map(two => {return two.conectionFeatures4.length}) >= [1] ?
+      : deviceTwo.connection.features4 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures4})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures4})}      
+        labelOne={deviceOne.connection.features4}
+        labelTwo={deviceTwo.connection.features4}
+        labelThree={deviceThree.connection.features4}      
       />
 
-      : deviceThree.map(three => {return three.conectionFeatures4.length}) >= [1] ?
+      : deviceThree.connection.features4 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures4})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures4})}      
+        labelOne={deviceOne.connection.features4}
+        labelTwo={deviceTwo.connection.features4}
+        labelThree={deviceThree.connection.features4}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.conectionFeatures5.length}) >= [1] ? 
+      {deviceOne.connection.features5 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures5})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures5})}      
+        labelOne={deviceOne.connection.features5}
+        labelTwo={deviceTwo.connection.features5}
+        labelThree={deviceThree.connection.features5}      
       />
-      : deviceTwo.map(two => {return two.conectionFeatures5.length}) >= [1] ?
+      : deviceTwo.connection.features5 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures5})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures5})}      
+        labelOne={deviceOne.connection.features5}
+        labelTwo={deviceTwo.connection.features5}
+        labelThree={deviceThree.connection.features5}      
       />
 
-      : deviceThree.map(three => {return three.conectionFeatures5.length}) >= [1] ?
+      : deviceThree.connection.features5 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.conectionFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.conectionFeatures5})}
-        labelThree={deviceThree.map(three => {return three.conectionFeatures5})}      
+        labelOne={deviceOne.connection.features5}
+        labelTwo={deviceTwo.connection.features5}
+        labelThree={deviceThree.connection.features5}      
       />
       : '' }
-
-
 
     </div>
   )

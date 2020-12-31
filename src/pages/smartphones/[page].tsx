@@ -13,124 +13,194 @@ import { DatasheetProps } from "../../components/CompareContent";
 import api from "../../services/api";
 
 export interface DatasheetDeviceProps {
-  datasheet: Array<{
-    HDR: string;
-    armazenamento: string;
-    audioPlay: string;
-    audioPlayFeatures: string;
-    audioPlayFeatures2: string;
-    audioPlayFeatures3: string;
-    authentication: string;
-    authenticationFeatures: string;
-    battery: string;
-    batteryCapacity: string;
-    batteryCapacity2: string;
-    batteryCharge: string;
-    batteryChargingFast: string;
-    batteryFeatures: string;
-    batteryFeatures2: string;
-    batteryFeatures3: string;
-    batteryReproductionAudio: string;
-    batteryReproductionVideo: string;
-    batteryReproductionVideo2: string;
-    block: string;
-    bluetooth: string;
-    cameraBack: string;
-    cameraBackEstabilizationOpitical: string;
-    cameraBackFeatures: string;
-    cameraBackFlash: string;
-    cameraBackFull: string;
-    cameraBackModos: string;
-    cameraBackOpenig: string;
-    cameraBackZoom: string;
-    cameraFront: string;
-    cameraFrontFeatures: string;
-    cameraFrontFeatures2: string;
-    cameraFrontFeatures3: string;
-    cameraFrontFeatures4: string;
-    cameraFrontFeatures5: string;
-    cameraFrontFeatures6: string;
-    cameraFrontFeatures7: string;
-    cameraFrontFeatures8: string;
-    cameraFrontFlash: string;
-    cameraFrontMP: string;
-    cameraFrontModos: string;
-    cameraFrontOpening: string;
-    cardSIM: string;
-    cardSIMFeatures: string;
-    chip: string;
-    chipset: string;
-    chipsetFeatures: string;
-    company: string;
-    conectionFeatures: string;
-    conectionFeatures2: string;
-    conectionFeatures3: string;
-    conectionFeatures4: string;
-    conectionFeatures5: string;
-    dataTransmition: string;
-    display: string;
-    displayFeatures: string;
-    displayFeatures2: string;
-    displayFeatures3: string;
-    displayFeatures4: string;
-    displayFeatures5: string;
-    displayFeatures6: string;
-    displayType: string;
-    espessura: string;
-    gps: string;
-    height: string;
-    iconBattery: string;
-    iconCameraBack: string;
-    iconChip: string;
-    iconLock: string;
-    iconSystem: string;
-    iconWave: string;
-    id: number;
-    linkAffiliate1: string;
-    linkAffiliate2: string;
-    linkAffiliate3: string;
-    linkAffiliate4: string;
-    linkAffiliate5: string;
-    linkAffiliate6: string;
-    linkAffiliate7: string;
-    linkAffiliate8: string;
-    linkAffiliate9: string;
-    linkAffiliate10: string;
-    memoriaExpansivel: string;
-    memoriaRam: string;
-    modelo: string;
-    name: string;
-    nfc: string;
-    peso: string;
-    polegada: string;
-    resistance: string;
-    resolution: string;
-    structure: string;
-    systemVersion: string;
-    videoFeatures: string;
-    videoFeatures2: string;
-    videoFeatures3: string;
-    videoFeatures4: string;
-    videoPlayback: string;
-    videoResolution: string;
-    videoSlowMotion: string;
-    videoStabilizationOptical: string;
-    videoZoom: string;
-    videoZoomFeatures: string;
-    wave: string;
-    waveMeters: string;
-    width: string;
-    wifi: string;
-    year: number;
-
-  }>
+  modelo?: string;
+  name?: string;
+  company?: string;
+  systemVersion?: string;
+  month?: number;
+  year?: number;
+  page?: string;
+  summary?: {
+    display?: string;
+    polegada?: string;
+    system?: string;
+    year?: number;
+    structure?: string;
+    camera?: string;
+    cameraFront?: string;
+    lock?: string;
+    chip?: string;
+    battery?: string;
+    meters?: string;
+    resistance?: string;
+  },
+  icon?: {
+    system?: string;
+    chip?: string;
+    battery?: string;
+    lock?: string;
+    wave?: string;
+  },
+  image?: {
+    compare?: string;
+    colors?: string;
+  },
+  capacity?: {
+    armazenamento?: string;
+    memoriaRam?: string;
+    memoriaExpansivel?: string;
+  },
+  display?: {
+    summary?: string;
+    polegada?: string;
+    type?: string;
+    HDR?: string;
+    resolution?: string;
+    block?: string;
+    protection?: string;
+    features?: string;
+    features2?: string;
+    features3?: string;
+    features4?: string;
+    features5?: string;
+    features6?: string;
+    features7?: string;
+    features8?: string;
+    features9?: string;
+    features10?: string;		
+  },
+  measurements?: {
+    summary?: string;
+    height?: string;
+    width?: string;
+    espessura?: string;
+    peso?: string;
+  },
+  resistance?: {
+    summary?: string;
+    meters?: string;
+    wave?: string;
+  },
+  chip?: {
+    summary?: string;
+    chipset?: string;
+    features?: string;
+  },
+  camera?: {
+    summary?: string;
+    mp?: string;
+    opening?: string;
+    estabilization?: string;
+    zoom?: string;
+    flash?: string;
+    modos?: string;
+    features?: string;
+  },
+  video_recording?: {
+    resolution?: string;
+    estabilization?: string;
+    zoom?: string;
+    slowMotion?: string;
+    features?: string;
+    features2?: string;
+    features3?: string;
+    features4?: string;
+    features5?: string;
+  },
+  front_camera?: {
+    summary?: string;
+    mp?: string;
+    opening?: string;
+    flash?: string;
+    modos?: string;
+    features?: string;
+    features2?: string;
+    features3?: string;
+    features4?: string;
+    features5?: string;
+    features6?: string;
+    features7?: string;
+    features8?: string;
+    features9?: string;
+    features10?: string;
+  },
+  connection?: {
+    dataTransmition?: string;
+    wifi?: string;
+    bluetooth?: string;
+    gps?: string;
+    nfc?: string;
+    features?: string;
+    features2?: string;
+    features3?: string;
+    features4?: string;
+    features5?: string;
+  },
+  authentication?: {
+    summary?: string;
+    features?: string;
+  },
+  audio_play_back?: {
+    features?: string;
+    features2?: string;
+    features3?: string;
+    features4?: string;
+    features5?: string;	
+  },
+  video_play_back?: {
+    features?: string;
+    features2?: string;
+    features3?: string;
+    features4?: string;
+    features5?: string;
+  },
+  battery?: {
+    summary?: string;
+    reproductionVideo?: string;
+    reproductionVideo2?: string;
+    reproductionAudio?: string;
+    chargingFast?: string;
+    capacity?: string;
+    capacity2?: string;
+    charge?: string;
+    features?: string;
+    features2?: string;
+    features3?: string;
+    features4?: string;
+    features5?: string;
+  },
+  card_sim?: {
+    features?: string;
+    features2?: string;
+    features3?: string;
+    features4?: string;
+    features5?: string;
+  },
+  affiliate?: {
+    link1?: string;
+    link2?: string;
+    link3?: string;
+    link4?: string;
+    link5?: string;
+    link6?: string;
+    link7?: string;
+    link8?: string;
+    link9?: string;
+    link10?: string;
+  }
 }
 
 export interface DeviceDatasheetProps {
   deviceName: string
 }
 
-function DatasheetLayout  ({ celular, data }) {
+interface IDataProps {
+  celular?: DatasheetDeviceProps;
+  data?: DatasheetDeviceProps[];
+}
+
+
+function DatasheetLayout  ({ celular, data }: IDataProps) {
 
   const { isFallback } = useRouter()
 
@@ -140,20 +210,20 @@ function DatasheetLayout  ({ celular, data }) {
     return <p>carregando...</p>
   }
   
-  const title = celular.map(data => {return data.name}) as unknown
+  const title = celular.name as unknown
 
   return (
-    <div id={"page-" + celular[0].page}>
+    <div id={"page-" + celular.page}>
       <Head>
         <title key="title">{`${title} - Especificações`}</title>
         <link rel="cononical" href={process.env.NEXT_PUBLIC_URL_BASE + router.asPath} key="cononical" />
 
-        <meta name='Description' content={`${celular[0].name}. Armazenamento de ${celular[0].armazenamento}. ${celular[0].authenticationFeatures}. ${celular[0].batteryCapacity}. ${celular[0].cameraBackFull}. ${celular[0].display}. ${celular[0].polegada}. ${celular[0].videoResolution}. `} key="description" />
+        <meta name='Description' content={`${celular.name}. Armazenamento de ${celular.capacity.armazenamento}. ${celular.authentication.summary}. ${celular.battery.capacity}. ${celular.camera.summary}. ${celular.display.summary}. ${celular.display.polegada}. ${celular.video_recording.resolution}. `} key="description" />
         <meta property='og:type' content='website' key="og:type" />
-        <meta property='og:title' content={`${celular[0].name} - Especificações`} key="og:title" />
-        <meta property='og:description' content={`${celular[0].name}. Armazenamento de ${celular[0].armazenamento}. ${celular[0].authenticationFeatures}. ${celular[0].batteryCapacity}. ${celular[0].cameraBackFull}. ${celular[0].display}. ${celular[0].polegada}. ${celular[0].videoResolution}. `} key="og:description" />
+        <meta property='og:title' content={`${celular.name} - Especificações`} key="og:title" />
+        <meta property='og:description' content={`${celular.name}. Armazenamento de ${celular.capacity.armazenamento}. ${celular.authentication.summary}. ${celular.battery.capacity}. ${celular.camera.summary}. ${celular.display.summary}. ${celular.display.polegada}. ${celular.video_recording.resolution}. `} key="og:description" />
         <meta property='og:url' content={process.env.NEXT_PUBLIC_URL_BASE + router.asPath } key="og:url" />
-        <meta property="og:image" content={process.env.NEXT_PUBLIC_URL_BASE + `/assets/images/smartphones/colors/${celular[0].page}.png`} key="og:image" />
+        <meta property="og:image" content={process.env.NEXT_PUBLIC_URL_BASE + `/assets/images/smartphones/colors/${celular.page}.png`} key="og:image" />
         
 
       </Head>
@@ -186,7 +256,7 @@ export default DatasheetLayout
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // const datasheet = await fetch(`${process.env.NEXT_PUBLIC_API_URL_BASE}/search?search=`)
-  const datasheet = await api.get(`search?search=`)
+  const datasheet = await api.get(`smartphones/search?search=`)
   const iphone = await datasheet.data
 
   const paths = iphone.map((smartphone:DatasheetProps) => {
@@ -205,8 +275,8 @@ export const getStaticProps:GetStaticProps = async (context) => {
   const { page } = context.params
 
   const response = await amazonPhonesPrice
-  const datasheet = await api.get(`search-page?search=${page}`)
-  const allphones = await api.get(`search?search=`)
+  const datasheet = await api.get(`smartphones/search-page?search=${page}`)
+  const allphones = await api.get(`smartphones/search?search=`)
 
   const data = await response
   const iphone = await datasheet.data

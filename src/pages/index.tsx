@@ -100,7 +100,7 @@ export default Home
 
 export const getStaticProps:GetStaticProps = async () => {
 
-  const response = await api.get(`search?search=`)
+  const response = await api.get(`smartphones/search?search=`)
 
   const data = await response.data
 

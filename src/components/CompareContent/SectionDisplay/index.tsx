@@ -4,7 +4,8 @@ import { InformationDevicesProps } from '../index'
 import SectionRows from '../../SectionRows';
 import SectionTitle from '../SectionTitle';
 
-const SectionDisplay: React.FC<InformationDevicesProps> = ({ deviceOne, deviceTwo, deviceThree, title, data }) => {
+const SectionDisplay: React.FC<InformationDevicesProps> = ({ deviceOne, deviceTwo, deviceThree, title }) => {
+
   return (
     <div className="section-display">
       <SectionTitle 
@@ -13,157 +14,157 @@ const SectionDisplay: React.FC<InformationDevicesProps> = ({ deviceOne, deviceTw
 
       <SectionRows 
         labelStrongOne="Tecnologia"
-        labelOne={deviceOne.length === 0 ? [data[0].display] : deviceOne.map(one => {return one.display})}
+        labelOne={deviceOne.display.summary}
         labelStrongTwo="Tecnologia"
-        labelTwo={deviceTwo.length === 0 ? [data[1].display] : deviceTwo.map(two => {return two.display})}
+        labelTwo={deviceTwo.display.summary}
         labelStrongThree="Tecnologia"
-        labelThree={deviceThree.length === 0 ? [data[2].display] : deviceThree.map(three => {return three.display})}      
+        labelThree={deviceThree.display.summary}      
       />
 
       <SectionRows 
         labelStrongOne="Tipo"
-        labelOne={deviceOne.length === 0 ? [data[0].displayType] : deviceOne.map(one => {return one.displayType})}
+        labelOne={deviceOne.display.type}
         labelStrongTwo="Tipo"
-        labelTwo={deviceTwo.length === 0 ? [data[1].displayType] : deviceTwo.map(two => {return two.displayType})}
+        labelTwo={deviceTwo.display.type}
         labelStrongThree="Tipo"
-        labelThree={deviceThree.length === 0 ? [data[2].displayType] : deviceThree.map(three => {return three.displayType})}      
+        labelThree={deviceThree.display.type}      
       />
 
       <SectionRows 
         labelStrongOne="Dimensão Diagonal"
-        labelOne={deviceOne.length === 0 ? [data[0].polegada] : deviceOne.map(one => {return one.polegada})}
+        labelOne={deviceOne.display.polegada}
         labelStrongTwo="Dimensão Diagonal"
-        labelTwo={deviceTwo.length === 0 ? [data[1].polegada] : deviceTwo.map(two => {return two.polegada})}
+        labelTwo={deviceTwo.display.polegada}
         labelStrongThree="Dimensão Diagonal"
-        labelThree={deviceThree.length === 0 ? [data[2].polegada] : deviceThree.map(three => {return three.polegada})}      
+        labelThree={deviceThree.display.polegada}      
       />
 
       <SectionRows 
         labelStrongOne="Dimensão Diagonal"
-        labelOne={deviceOne.length === 0 ? [data[0].HDR] : deviceOne.map(one => {return one.HDR})}
+        labelOne={deviceOne.display.HDR}
         labelStrongTwo="Dimensão Diagonal"
-        labelTwo={deviceTwo.length === 0 ? [data[1].HDR] : deviceTwo.map(two => {return two.HDR})}
+        labelTwo={deviceTwo.display.HDR}
         labelStrongThree="Dimensão Diagonal"
-        labelThree={deviceThree.length === 0 ? [data[2].HDR] : deviceThree.map(three => {return three.HDR})}      
+        labelThree={deviceThree.display.HDR}      
       />
 
       <SectionRows 
-        labelOne={deviceOne.length === 0 ? [data[0].resolution] : deviceOne.map(one => {return one.resolution})}
-        labelTwo={deviceTwo.length === 0 ? [data[1].resolution] : deviceTwo.map(two => {return two.resolution})}
-        labelThree={deviceThree.length === 0 ? [data[2].resolution] : deviceThree.map(three => {return three.resolution})}      
+        labelOne={deviceOne.display.resolution}
+        labelTwo={deviceTwo.display.resolution}
+        labelThree={deviceThree.display.resolution}      
       />
 
       <SectionRows 
         labelStrongOne="Características"
-        labelOne={deviceOne.length === 0 ? [data[0].displayFeatures] : deviceOne.map(one => {return one.displayFeatures})}
+        labelOne={deviceOne.display.features}
         labelStrongTwo="Características"
-        labelTwo={deviceTwo.length === 0 ? [data[1].displayFeatures] : deviceTwo.map(two => {return two.displayFeatures})}
+        labelTwo={deviceTwo.display.features}
         labelStrongThree="Características"
-        labelThree={deviceThree.length === 0 ? [data[2].displayFeatures] : deviceThree.map(three => {return three.displayFeatures})}      
+        labelThree={deviceThree.display.features}      
       />
 
-      {deviceOne.map(one => {return one.displayFeatures2.length}) >= [1] ? 
+      {deviceOne.display.features2 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures2})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures2})}      
+        labelOne={deviceOne.display.features2}
+        labelTwo={deviceTwo.display.features2}
+        labelThree={deviceThree.display.features2}      
       />
-      : deviceTwo.map(two => {return two.displayFeatures2.length}) >= [1] ?
+      : deviceTwo.display.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures2})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures2})}      
+        labelOne={deviceOne.display.features2}
+        labelTwo={deviceTwo.display.features2}
+        labelThree={deviceThree.display.features2}      
       />
 
-      : deviceThree.map(three => {return three.displayFeatures2.length}) >= [1] ?
+      : deviceThree.display.features2 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures2})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures2})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures2})}      
+        labelOne={deviceOne.display.features2}
+        labelTwo={deviceTwo.display.features2}
+        labelThree={deviceThree.display.features2}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.displayFeatures3.length}) >= [1] ? 
+      {deviceOne.display.features3 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures3})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures3})}      
+        labelOne={deviceOne.display.features3}
+        labelTwo={deviceTwo.display.features3}
+        labelThree={deviceThree.display.features3}      
       />
-      : deviceTwo.map(two => {return two.displayFeatures3.length}) >= [1] ?
+      : deviceTwo.display.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures3})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures3})}      
+        labelOne={deviceOne.display.features3}
+        labelTwo={deviceTwo.display.features3}
+        labelThree={deviceThree.display.features3}      
       />
 
-      : deviceThree.map(three => {return three.displayFeatures3.length}) >= [1] ?
+      : deviceThree.display.features3 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures3})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures3})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures3})}      
+        labelOne={deviceOne.display.features3}
+        labelTwo={deviceTwo.display.features3}
+        labelThree={deviceThree.display.features3}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.displayFeatures4.length}) >= [1] ? 
+      {deviceOne.display.features4 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures4})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures4})}      
+        labelOne={deviceOne.display.features4}
+        labelTwo={deviceTwo.display.features4}
+        labelThree={deviceThree.display.features4}      
       />
-      : deviceTwo.map(two => {return two.displayFeatures4.length}) >= [1] ?
+      : deviceTwo.display.features4 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures4})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures4})}      
+        labelOne={deviceOne.display.features4}
+        labelTwo={deviceTwo.display.features4}
+        labelThree={deviceThree.display.features4}      
       />
 
-      : deviceThree.map(three => {return three.displayFeatures4.length}) >= [1] ?
+      : deviceThree.display.features4 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures4})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures4})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures4})}      
+        labelOne={deviceOne.display.features4}
+        labelTwo={deviceTwo.display.features4}
+        labelThree={deviceThree.display.features4}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.displayFeatures5.length}) >= [1] ? 
+      {deviceOne.display.features5 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures5})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures5})}      
+        labelOne={deviceOne.display.features5}
+        labelTwo={deviceTwo.display.features5}
+        labelThree={deviceThree.display.features5}      
       />
-      : deviceTwo.map(two => {return two.displayFeatures5.length}) >= [1] ?
+      : deviceTwo.display.features5 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures5})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures5})}      
+        labelOne={deviceOne.display.features5}
+        labelTwo={deviceTwo.display.features5}
+        labelThree={deviceThree.display.features5}      
       />
 
-      : deviceThree.map(three => {return three.displayFeatures5.length}) >= [1] ?
+      : deviceThree.display.features5 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures5})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures5})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures5})}      
+        labelOne={deviceOne.display.features5}
+        labelTwo={deviceTwo.display.features5}
+        labelThree={deviceThree.display.features5}      
       />
       : '' }
 
-      {deviceOne.map(one => {return one.displayFeatures6.length}) >= [1] ? 
+      {deviceOne.display.features6 ? 
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures6})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures6})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures6})}      
+        labelOne={deviceOne.display.features6}
+        labelTwo={deviceTwo.display.features6}
+        labelThree={deviceThree.display.features6}      
       />
-      : deviceTwo.map(two => {return two.displayFeatures6.length}) >= [1] ?
+      : deviceTwo.display.features6 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures6})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures6})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures6})}      
+        labelOne={deviceOne.display.features6}
+        labelTwo={deviceTwo.display.features6}
+        labelThree={deviceThree.display.features6}      
       />
 
-      : deviceThree.map(three => {return three.displayFeatures6.length}) >= [1] ?
+      : deviceThree.display.features6 ?
       <SectionRows
-        labelOne={deviceOne.map(one => {return one.displayFeatures6})}
-        labelTwo={deviceTwo.map(two => {return two.displayFeatures6})}
-        labelThree={deviceThree.map(three => {return three.displayFeatures6})}      
+        labelOne={deviceOne.display.features6}
+        labelTwo={deviceTwo.display.features6}
+        labelThree={deviceThree.display.features6}      
       />
       : '' }
 
