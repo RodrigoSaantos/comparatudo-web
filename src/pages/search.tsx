@@ -25,7 +25,11 @@ function SearchPage({allDevices}) {
       api.get('smartphones/search?search=' + router.query.search).then(response => {
         setListPhones(response.data)
         setSearch(router.query.search as string)
-        setLoading(false);
+        
+        setTimeout(() => {
+          setLoading(false);
+          
+        }, 100);
       })
     } catch (err) {
       console.log(err);

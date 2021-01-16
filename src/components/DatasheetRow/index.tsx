@@ -1,4 +1,5 @@
 
+import { JSXElementConstructor } from 'react'
 import {Div, Figure} from './style'
 
 interface DatasheetRowProps {
@@ -7,18 +8,18 @@ interface DatasheetRowProps {
   figureClass?: string;
   figureUrl?: string;
   line1Strong?: string;
-  line1String?: string;
+  line1String?: string | JSX.Element;
   line1?: string;
   line2Strong?: string;
-  line2String?: string;
+  line2String?: string | JSX.Element;
   line2?: string;
-  line3String?: string;
+  line3String?: string | JSX.Element;
   line3Strong?: string;
   line3?: string;
-  line4String?: string;
+  line4String?: string | JSX.Element;
   line4Strong?: string;
   line4?: string;
-  line5String?: string;
+  line5String?: string | JSX.Element;
   line5Strong?: string;
   line5?: string
   line6String?: string;

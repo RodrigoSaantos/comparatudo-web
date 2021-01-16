@@ -30,15 +30,14 @@ const Datasheet: React.FC<DataProps> = ({data}) => {
 
     <DatasheetRow
       title="Preço"
-
       line1Strong='Amazon'
-      line1String={'Sem preço no momento'}
+      line1String={data.affiliate.link1 ? <a href={data.affiliate.link1} target="_blank">Acessar loja</a> : 'Loja indisponível'}
       line2Strong='Magazine Luiza'
-      line2String={'Sem preço no momento'}
+      line2String={data.affiliate.link2 ? <a href={data.affiliate.link2} target="_blank">Acessar loja</a> : 'Loja indisponível'}
       line3Strong='Submarino'
-      line3String={'Sem preço no momento'}
+      line3String={data.affiliate.link3 ? <a href={data.affiliate.link3} target="_blank">Acessar loja</a> : 'Loja indisponível'}
       line4Strong='Americanas'
-      line4String={'Sem preço no momento'}
+      line4String={data.affiliate.link4 ? <a href={data.affiliate.link4} target="_blank">Acessar loja</a> : 'Loja indisponível'}
 
 
     />

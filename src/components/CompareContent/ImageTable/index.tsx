@@ -152,23 +152,23 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
  
              </ul>
              <div className={"price-value price-value-amazon " + classButtonAmazon}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceOne.affiliate.link1}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceOne.affiliate.link1}>Acessar a Loja da Amazon</a>
              </div>
  
              <div className={"price-value price-value-magalu " + classButtonMagalu}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceOne.affiliate.link2}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceOne.affiliate.link2}>Acessar a Loja da Magazine Luiza</a>
              </div>
  
              <div className={"price-value price-value-submarino " + classButtonSubmarino}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceOne.affiliate.link3}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceOne.affiliate.link3}>Acessar a Loja do Submarino</a>
              </div>
  
              <div className={"price-value price-value-extra " + classButtonExtra}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceOne.affiliate.link4}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceOne.affiliate.link4}>Acessar a Loja do Extra</a>
              </div>
  
            </div>
@@ -215,23 +215,23 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
                </li>
              </ul>
              <div className={"price-value price-value-amazon " + classButtonAmazonTwo}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceTwo.affiliate.link1}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceTwo.affiliate.link1}>Acessar a Loja da Amazon</a>
              </div>
  
              <div className={"price-value price-value-magalu " + classButtonMagaluTwo}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceTwo.affiliate.link2}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceTwo.affiliate.link2}>Acessar a Loja da Magazine Luiza</a>
              </div>
  
              <div className={"price-value price-value-submarino " + classButtonSubmarinoTwo}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceTwo.affiliate.link3}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceTwo.affiliate.link3}>Acessar a Loja do Submarino</a>
              </div>
  
              <div className={"price-value price-value-extra " + classButtonExtraTwo}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceTwo.affiliate.link4}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceTwo.affiliate.link4}>Acessar a Loja do Extra</a>
              </div>
  
            </div>
@@ -278,23 +278,23 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
                </li>
              </ul>
              <div className={"price-value price-value-amazon " + classButtonAmazonThree}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceThree.affiliate.link1}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceThree.affiliate.link1}>Acessar a Loja da Amazon</a>
              </div>
  
              <div className={"price-value price-value-magalu " + classButtonMagaluThree}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceThree.affiliate.link2}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceThree.affiliate.link2}>Acessar a Loja da Magazine Luiza</a>
              </div>
  
              <div className={"price-value price-value-submarino " + classButtonSubmarinoThree}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceThree.affiliate.link3}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceThree.affiliate.link3}>Acessar a Loja do Submarino</a>
              </div>
  
              <div className={"price-value price-value-extra " + classButtonExtraThree}>
-               <h1>Sem preço no momento</h1>
-               <a target="_blank" href={deviceThree.affiliate.link4}>Acessar a Loja</a>
+               {/* <h1>Sem preço no momento</h1>  */}
+               <a target="_blank" href={deviceThree.affiliate.link4}>Acessar a Loja do Extra</a>
              </div>
  
            </div>

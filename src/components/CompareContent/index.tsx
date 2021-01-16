@@ -3,7 +3,6 @@ import React, { useState, useEffect, FormEvent } from 'react';
 import SectionSummary from './SectionSummary';
 import ImageTable from './ImageTable';
 import api from '../../services/api';
-import { GetStaticProps } from 'next';
 import SectionCapacity from './SectionCapacity';
 import SectionDisplay from './SectionDisplay';
 import SectionMeasurements from './SectionMeasurements';

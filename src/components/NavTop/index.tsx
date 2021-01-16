@@ -62,10 +62,10 @@ const NavTop: React.FC<NavTopProps> = ({ title, data }) => {
 
       <div className="nav-top">
         <h2>{title}</h2>
-        <div>
+        {/* <div>
           <span>Menor preço</span>
           <button>{lowestPrice}</button>
-        </div>
+        </div> */}
       </div>
 
     </Container>
