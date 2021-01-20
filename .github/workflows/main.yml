@@ -44,5 +44,5 @@ jobs:
             cd /home/wwcomp/public_html/comparatudo-web
             yarn
             yarn build
-            pm2 restart comparatudo
+            pm2 restart comparatudo-web
      
