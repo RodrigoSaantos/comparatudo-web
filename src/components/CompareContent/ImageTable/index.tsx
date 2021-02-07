@@ -144,7 +144,7 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
                </li>
                <li className="price-nav-item">
                  <ButtonPrice 
-                  name="EXTRA" 
+                  name="AMERICANAS" 
                   backgroundColor="#ff0000" 
                   onClick={showPriceExtra}
                  />
@@ -168,7 +168,7 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
  
              <div className={"price-value price-value-extra " + classButtonExtra}>
                {/* <h1>Sem preço no momento</h1>  */}
-               <a target="_blank" href={deviceOne.affiliate.link4}>Acessar a Loja do Extra</a>
+               <a target="_blank" href={deviceOne.affiliate.link4}>Acessar a Loja do Americanas</a>
              </div>
  
            </div>
@@ -208,7 +208,7 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
                </li>
                <li className="price-nav-item">
                  <ButtonPrice 
-                  name="EXTRA" 
+                  name="AMERICANAS" 
                   backgroundColor="#ff0000" 
                   onClick={showPriceExtraTwo}
                  />
@@ -231,7 +231,7 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
  
              <div className={"price-value price-value-extra " + classButtonExtraTwo}>
                {/* <h1>Sem preço no momento</h1>  */}
-               <a target="_blank" href={deviceTwo.affiliate.link4}>Acessar a Loja do Extra</a>
+               <a target="_blank" href={deviceTwo.affiliate.link4}>Acessar a Loja do Americanas</a>
              </div>
  
            </div>
@@ -271,7 +271,7 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
                </li>
                <li className="price-nav-item">
                  <ButtonPrice 
-                  name="EXTRA" 
+                  name="AMERICANAS" 
                   backgroundColor="#ff0000" 
                   onClick={showPriceExtraThree}
                  />
@@ -294,7 +294,7 @@ const ImageTable: React.FC<InformationDevicesProps> = ({deviceOne, deviceTwo, de
  
              <div className={"price-value price-value-extra " + classButtonExtraThree}>
                {/* <h1>Sem preço no momento</h1>  */}
-               <a target="_blank" href={deviceThree.affiliate.link4}>Acessar a Loja do Extra</a>
+               <a target="_blank" href={deviceThree.affiliate.link4}>Acessar a Loja do Americanas</a>
              </div>
  
            </div>
