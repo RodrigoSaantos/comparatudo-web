@@ -18,7 +18,6 @@ const Home = ({allDevices}) => {
       <Head>
         <title>Compare Tudo! - Celulares, Tablets, Computadores e muito mais!</title>
         <link rel="cononical" href={process.env.NEXT_PUBLIC_URL_BASE + router.asPath} key="cononical" />
-        <meta name="lomadee-verification" content="22789181" />
 
         <meta name="description" content="Compare todos os celulares, tablets, computadores e muito mais!" key="description" />
         <meta property='og:title' content="Compare Tudo! - Celulares, Tablets, Computadores e muito mais!" key="og:title" />
