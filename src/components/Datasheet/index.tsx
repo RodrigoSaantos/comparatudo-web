@@ -48,7 +48,7 @@ const Datasheet: React.FC<DataProps> = ({data}) => {
       line1Strong="Armazenamento"
       line1={data.capacity.armazenamento}
       line2Strong="Memória (RAM)"
-      line2={data.capacity.memoriaExpansivel}
+      line2={data.capacity.memoriaRam}
       line3Strong="Memória Expansível"
       line3={data.capacity.memoriaExpansivel}
 
@@ -202,7 +202,7 @@ const Datasheet: React.FC<DataProps> = ({data}) => {
     />
 
     <DatasheetRow
-      title="Rede celular e Cdataxões sem fio"
+      title="Rede celular e Conexões sem fio"
 
       line1={data.connection.dataTransmition}
       
