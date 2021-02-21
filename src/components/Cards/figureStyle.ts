@@ -5,8 +5,11 @@ interface Icss {
 }
 
 export const Figure = styled.div`
-  margin: 30px auto 0 auto;
+  margin: 10px auto 0 auto;
   width: 90%;
+  border: 20px solid white;
+  border-radius: 40px;
+  background: white;
 
   figure.card-img {
     text-align: center;
@@ -19,32 +22,6 @@ export const Figure = styled.div`
     background: ${(props: Icss) => props.backgroundImage};
   }
 
-  figure.card-img.iPhone11Pro {
-    width: 81%;
-  }
-
-  figure.card-img.iPhoneSE2nd {
-    width: 68%;
-  }
-
-  figure.card-img.GalaxyA71 {
-    width: 52%;
-  }
-
-  figure.card-img.iPhoneXS {
-    width: 72%
-  }
-
-  figure.card-img.iPhone11ProMax {
-    width: 82%
-  }
-
-  figure.card-img.iPhone11 {
-    width: 82%
-  }
-
-  figure.card-img.iPhone12 {
-    width: 83%
-  }
+  
 
 `
