@@ -86,7 +86,7 @@ const Footer:React.FC<DataProps> = ({data}) => {
                 <Link href="/">
                 <a>
                   <img src={emailEnvelop} width="15" height="15" alt="" />
-                  <span>contato@contato.com.br</span>
+                  <span>oi@comparatudo.com</span>
                 </a>
                 </Link>
               </li>
