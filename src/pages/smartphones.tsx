@@ -5,7 +5,7 @@ import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import PageHeader from '../components/PageHeader'
-import api from '../services/api'
+import { api, apiHttp } from '../services/api'
 import { Div, Main } from '../styles/pages/smartphones'
 import Search from '../components/Search'
 import { GetStaticProps } from 'next'
@@ -108,8 +108,8 @@ export default Smartphones
 
 export const getStaticProps:GetStaticProps = async () => {
 
-  // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_BASE}/search?search=`)
-  const response = await api.get('smartphones/search?search=')
+  // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_HTTP}/search?search=`)
+  const response = await apiHttp.get('smartphones/search?search=')
 
   const data = await response.data
   return {

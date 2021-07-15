@@ -10,7 +10,7 @@ import amazonPhonesPrice from '../../services/amazonPhonesPrice.json'
 import { useRouter } from 'next/router'
 
 import { DatasheetProps } from "../../components/CompareContent";
-import api from "../../services/api";
+import { api, apiHttp } from "../../services/api";
 
 export interface DatasheetDeviceProps {
   modelo?: string;
@@ -256,7 +256,7 @@ export default DatasheetLayout
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // const datasheet = await fetch(`${process.env.NEXT_PUBLIC_API_URL_BASE}/search?search=`)
-  const datasheet = await api.get(`smartphones/search?search=`)
+  const datasheet = await apiHttp.get(`smartphones/search?search=`)
   const iphone = await datasheet.data
 
   const paths = iphone.map((smartphone:DatasheetProps) => {
@@ -275,8 +275,8 @@ export const getStaticProps:GetStaticProps = async (context) => {
   const { page } = context.params
 
   const response = await amazonPhonesPrice
-  const datasheet = await api.get(`smartphones/search-page?search=${page}`)
-  const allphones = await api.get(`smartphones/search?search=`)
+  const datasheet = await apiHttp.get(`smartphones/search-page?search=${page}`)
+  const allphones = await apiHttp.get(`smartphones/search?search=`)
 
   const data = await response
   const iphone = await datasheet.data

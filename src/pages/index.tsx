@@ -8,7 +8,7 @@ import { GetStaticProps } from 'next'
 
 import smartphoneImage from '../assets/images/home/smartphones.png'
 import { useRouter } from 'next/router'
-import api from '../services/api'
+import { api, apiHttp } from '../services/api'
 
 const Home = ({allDevices}) => {
   const router = useRouter()
@@ -100,7 +100,7 @@ export default Home
 
 export const getStaticProps:GetStaticProps = async () => {
 
-  const response = await api.get(`smartphones/search?search=`)
+  const response = await apiHttp.get(`smartphones/search?search=`)
 
   const data = await response.data
 

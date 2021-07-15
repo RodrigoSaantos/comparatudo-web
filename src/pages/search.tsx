@@ -4,7 +4,7 @@ import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import PageHeader from '../components/PageHeader'
-import api from '../services/api'
+import { api, apiHttp } from '../services/api'
 import { Div, Main } from '../styles/pages/smartphones'
 import {useRouter} from 'next/router'
 import { ChildreenSearch, Input, Line, SearchIcon, CreateElement } from '../styles/pages/search'
@@ -134,7 +134,7 @@ export default SearchPage
 
 export const getStaticProps:GetStaticProps = async () => {
 
-  const response = await api.get(`smartphones/search?search=`)
+  const response = await apiHttp.get(`smartphones/search?search=`)
 
   const data = await response.data
 

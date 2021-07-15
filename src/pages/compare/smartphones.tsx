@@ -7,7 +7,7 @@ import Head from 'next/head';
 import Footer from '../../components/Footer';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router'
-import api from '../../services/api';
+import { api, apiHttp } from '../../services/api';
 
 
 function Smartphones({ allDevices }) {
@@ -49,8 +49,8 @@ export default Smartphones;
 
 export const getStaticProps:GetStaticProps = async () => {
 
-  // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_BASE}/search?search=`)
-  const response = await api.get('smartphones/last-phones')
+  // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL_HTTP}/search?search=`)
+  const response = await apiHttp.get('smartphones/last-phones')
 
   const data = await response.data
   

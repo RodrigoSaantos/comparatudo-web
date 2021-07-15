@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useRef, useState } from 'react';
 import Link from 'next/link'
 
 import { CreateElement, NavBarStyle } from './NavBar'
-import api from '../../services/api';
+import { api } from '../../services/api';
 import { useRouter } from 'next/router';
 
 function NavBar() {
